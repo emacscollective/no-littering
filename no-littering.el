@@ -140,8 +140,10 @@ subdirectory). The paths are created using
 
 ;;; Third-party packages
 
-;; omit the package here because `smex-save-file' should be set before the
-;; package loads
+(without-littering projectile
+  (setq projectile-cache-file          (var "cache"))
+  (setq projectile-known-projects-file (var "bookmarks.eld")))
+
 (without-littering smex
   (setq smex-save-file (var "smex-items")))
 
