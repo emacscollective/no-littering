@@ -77,36 +77,76 @@ This variable has to be set before `no-littering' is loaded.")
   "The directory where packages place their persistent data files.
 This variable has to be set before `no-littering' is loaded.")
 
-(cl-flet ((etc (file) (expand-file-name (convert-standard-filename file)
-                                        no-littering-etc-directory))
-          (var (file) (expand-file-name (convert-standard-filename file)
-                                        no-littering-var-directory)))
-  (with-no-warnings ; many of these variables haven't been defined yet
+(defun no-littering-make-path (dir file)
+  "Returns path DIR/FILE, creating any non-existing
+directories (including parent ones) if necessary."
+  (unless (file-exists-p dir)
+    (make-directory dir t))
+  (expand-file-name (convert-standard-filename file) dir))
+
+(defmacro without-littering (package &rest body)
+  "Execute BODY in an environment with short helper functions,
+`var' and `etc', for creating no-littering paths specific to
+PACKAGE. If PACKAGE is non nil, BODY will only be executed if
+PACKAGE can be found in `load-path' using `locate-library'. Note
+this means that the load-path for all affected packages needs to
+be set up prior to using this macro for a given package.
+
+Within the environment, the forms \(var \"file\"\) and \(etc
+\"file\"\) each yield a path of the form \"$base/[package/]file\"
+where $base is either `no-littering-var-directory' or
+`no-littering-etc-directory' and package/ is a directory with the
+same name as the third-party package PACKAGE (use nil to omit the
+subdirectory). The paths are created using
+`no-littering-make-path'. For example,
+
+\(without-littering projectile
+  \(setq projectile-cache-file          \(var \"cache\"\)\)
+  \(setq projectile-known-projects-file \(var \"bookmarks.eld\"\)\)\)."
+  (declare (indent 1))
+  (let ((package-name (and package (symbol-name package))))
+    `(when (or (null ,package-name)
+               (locate-library ,package-name))
+       (cl-flet ((etc (apply-partially
+                       #'no-littering-make-path
+                       (concat
+                        no-littering-etc-directory ,package-name)))
+                 (var (apply-partially
+                       #'no-littering-make-path
+                       (concat
+                        no-littering-var-directory ,package-name))))
+         ,@body))))
 
 ;;; Built-in packages
 
-    (setq auto-save-list-file-prefix       (var "saves-"))
-    (setq backup-directory-alist           (list (cons "." (var "backups/"))))
-    (setq bookmark-default-file            (var "bookmarks.el"))
-    (setq desktop-path                     (list (var "desktop/")))
-    (setq desktop-base-file-name           (var "default.el"))
-    (setq desktop-base-lock-name           (var "default.lock"))
-    (setq eshell-directory-name            (var "eshell/"))
-    (setq ido-save-directory-list-file     (var "ido.last"))
-    (setq nsm-settings-file                (var "network-security.data"))
-    (setq org-id-locations-file            (var "org/org-id-locations"))
-    (setq org-registry-file                (var "org/org-registry.el"))
-    (setq recentf-save-file                (var "recentf.el"))
-    (setq save-place-file                  (var "saveplace.el"))
-    (setq savehist-file                    (var "savehist.el"))
-    (setq tramp-persistency-file-name      (var "tramp.el"))
-    (setq trash-directory                  (var "trash/"))
-    (setq url-configuration-directory      (var "url/"))
+(without-littering nil
+  (setq abbrev-file-name              (var "abbrev_defs"))
+  (setq auto-save-list-file-prefix    (var "saves-"))
+  (setq backup-directory-alist        (list (cons "." (var "backups/"))))
+  (setq bookmark-default-file         (var "bookmarks.el"))
+  (setq desktop-path                  (list (var "desktop/")))
+  (setq desktop-base-file-name        (var "default.el"))
+  (setq desktop-base-lock-name        (var "default.lock"))
+  (setq eshell-directory-name         (var "eshell/"))
+  (setq ido-save-directory-list-file  (var "ido.last"))
+  (setq nsm-settings-file             (var "network-security.data"))
+  (setq org-id-locations-file         (var "org/org-id-locations"))
+  (setq org-registry-file             (var "org/org-registry.el"))
+  (setq recentf-save-file             (var "recentf.el"))
+  (setq save-place-file               (var "saveplace.el"))
+  (setq savehist-file                 (var "savehist.el"))
+  (setq tramp-persistency-file-name   (var "tramp.el"))
+  (setq trash-directory               (var "trash/"))
+  (setq url-configuration-directory   (var "url/")))
 
 ;;; Third-party packages
 
-    (setq smex-save-file                   (var "smex-items"))
-    ))
+(without-littering projectile
+  (setq projectile-cache-file          (var "cache"))
+  (setq projectile-known-projects-file (var "bookmarks.eld")))
+
+(without-littering smex
+  (setq smex-save-file (var "smex-items")))
 
 (provide 'no-littering)
 ;; Local Variables:
