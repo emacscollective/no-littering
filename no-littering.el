@@ -120,6 +120,7 @@ subdirectory). The paths are created using
 ;;; Built-in packages
 
 (without-littering nil
+  (setq abbrev-file-name              (var "abbrev_defs"))
   (setq auto-save-list-file-prefix    (var "saves-"))
   (setq backup-directory-alist        (list (cons "." (var "backups/"))))
   (setq bookmark-default-file         (var "bookmarks.el"))
