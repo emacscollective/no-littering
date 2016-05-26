@@ -106,6 +106,8 @@ This variable has to be set before `no-littering' is loaded.")
 ;;; Third-party packages
 
     (setq smex-save-file                   (var "smex-items"))
+    (setq projectile-cache-file            (var "projectile.cache"))
+    (setq projectile-known-projects-file   (var "projectile-bookbarks.eld"))
     ))
 
 (provide 'no-littering)
