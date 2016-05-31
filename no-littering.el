@@ -90,11 +90,11 @@ This variable has to be set before `no-littering' is loaded.")
     (setq bookmark-default-file            (var "bookmark-default.el"))
     (setq desktop-path                     (list (var "desktop/")))
     (setq eshell-directory-name            (var "eshell/"))
-    (setq ido-save-directory-list-file     (var "ido-save-directory-list"))
-    (setq nsm-settings-file                (var "nsm-settings"))
+    (setq ido-save-directory-list-file     (var "ido-save-directory-list.el"))
+    (setq nsm-settings-file                (var "nsm-settings.el"))
     (eval-after-load 'org
       `(make-directory ,(var "org/") t))
-    (setq org-id-locations-file            (var "org/org-id-locations"))
+    (setq org-id-locations-file            (var "org/org-id-locations.el"))
     (setq org-registry-file                (var "org/org-registry.el"))
     (setq recentf-save-file                (var "recentf-save.el"))
     (setq save-place-file                  (var "save-place.el"))
@@ -106,7 +106,7 @@ This variable has to be set before `no-littering' is loaded.")
 
 ;;; Third-party packages
 
-    (setq smex-save-file                   (var "smex-save"))
+    (setq smex-save-file                   (var "smex-save.el"))
     ))
 
 (provide 'no-littering)
