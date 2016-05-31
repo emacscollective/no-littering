@@ -101,7 +101,8 @@ This variable has to be set before `no-littering' is loaded.")
     (setq savehist-file                    (var "savehist.el"))
     (setq tramp-persistency-file-name      (var "tramp.el"))
     (setq trash-directory                  (var "trash/"))
-    (setq url-configuration-directory      (var "url/"))
+    (setq url-cache-directory              (var "url/"))
+    (setq url-configuration-directory      (etc "url/"))
 
 ;;; Third-party packages
 
