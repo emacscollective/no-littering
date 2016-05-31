@@ -92,6 +92,8 @@ This variable has to be set before `no-littering' is loaded.")
     (setq eshell-directory-name            (var "eshell/"))
     (setq ido-save-directory-list-file     (var "ido.last"))
     (setq nsm-settings-file                (var "network-security.data"))
+    (eval-after-load 'org
+      `(make-directory ,(var "org/") t))
     (setq org-id-locations-file            (var "org/org-id-locations"))
     (setq org-registry-file                (var "org/org-registry.el"))
     (setq recentf-save-file                (var "recentf.el"))
