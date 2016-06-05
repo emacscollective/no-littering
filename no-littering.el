@@ -141,6 +141,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq desktop-path                     (list (var "desktop/")))
     (setq eshell-directory-name            (var "eshell/"))
     (setq ido-save-directory-list-file     (var "ido-save-directory-list.el"))
+    (setq image-dired-dir                  (var "image-dired/"))
     (setq nsm-settings-file                (var "nsm-settings.el"))
     (eval-after-load 'org
       `(make-directory ,(var "org/") t))
