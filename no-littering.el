@@ -157,6 +157,7 @@ This variable has to be set before `no-littering' is loaded.")
 ;;; Third-party packages
 
     (setq smex-save-file                   (var "smex-save.el"))
+    (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     ))
 
 (provide 'no-littering)
