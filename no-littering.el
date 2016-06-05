@@ -85,6 +85,21 @@
 ;; Any subdirectories at the top-level should use the corresponding
 ;; package name as a prefix, similar to how files are named.
 
+;; * Ordering and alignment
+;;
+;; The code that sets the values of themed variables is split into two
+;; groups.  The first group sets the value of variables that belong to
+;; packages that are part of Emacs, and the second group is used for
+;; variables that are defined by packages that are not part of Emacs.
+;; Each of these lists is sorted alphabetically.  Please keep it that
+;; way.
+;;
+;; We attempt to align the value forms inside different `setq' forms.
+;; If the symbol part for a particular variable is too long to allow
+;; doing so, then don't worry about it and just break the alignment.
+;; If it turns out that this happens very often, then we will adjust
+;; the alignment eventually.
+
 ;;; Code:
 
 (require 'cl-lib)
