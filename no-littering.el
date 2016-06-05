@@ -100,6 +100,19 @@
 ;; If it turns out that this happens very often, then we will adjust
 ;; the alignment eventually.
 
+;; * Commit messages
+;;
+;; Please theme each package using a separate commit and use commit
+;; messages of the form "<package>: theme <variable".  If a package
+;; has several path variables, then you should theme them all in one
+;; commit.  If the variable names do not fit nicely on the summary
+;; line, then use a message such as:
+;;
+;;   foo: theme variables
+;;
+;;   Theme `foo-config-file', `foo-cache-directory',
+;;   and `foo-persistent-file'.
+
 ;;; Code:
 
 (require 'cl-lib)
