@@ -158,6 +158,8 @@ This variable has to be set before `no-littering' is loaded.")
 
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
     (setq mc/list-file                     (var "mc-lists.el"))
+    (setq projectile-cache-file            (var "projectile-cache"))
+    (setq projectile-known-projects-file   (var "projectile-bookmarks.eld"))
     (setq smex-save-file                   (var "smex-save.el"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     ))
