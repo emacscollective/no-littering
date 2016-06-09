@@ -66,25 +66,27 @@
 
 ;; Conventions:
 
-;; * Files
+;; * File names
 ;;
-;; To use an example, the variable `smex-save-file' from the `smex'
-;; package is set to `smex-save.el'.  This is based on three
-;; principles.  File names should
+;; If a package has only one persistent data file, then that is placed
+;; in `no-littering-var-directory' itself.  If a package has multiple
+;; files, then they are placed in a subdirectory, whose file name is
+;; the name of the package.  Likewise for a package's configuration
+;; files.
 ;;
-;; 1. Share the prefix of the package/feature that uses them.
-;; 2. Reflect the name of the elisp variable that references them.  If
+;; Additonally a file name should:
+;;
+;; 1. Share the prefix of the package that uses it.  For files that
+;;    are located in a a subdirectory, the name of the directory counts
+;;    as the prefix.
+;;
+;; 2. Reflect the name of the elisp variable that references it.  If
 ;;    you only know the name of the file, it should be trivial to find
 ;;    the variable that references that file in Emacs (e.g. to find
 ;;    its documentation).
-
+;;
 ;; 3. Use appropriate extensions (if applicable) to signal the content
 ;;    of the file and to trigger the correct major-mode.
-
-;; * Directories
-;;
-;; Any subdirectories at the top-level should use the corresponding
-;; package name as a prefix, similar to how files are named.
 
 ;; * Ordering and alignment
 ;;
