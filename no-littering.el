@@ -169,6 +169,7 @@ This variable has to be set before `no-littering' is loaded.")
 
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
     (setq helm-adaptive-history-file       (var "helm-adaptive-history.el"))
+    (setq helm-github-stars-cache-file     (var "helm-github-stars-cache"))
     (setq mc/list-file                     (var "mc-list.el"))
     (eval-after-load 'projectile
       `(make-directory ,(var "projectile/") t))
