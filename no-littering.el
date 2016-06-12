@@ -168,6 +168,9 @@ This variable has to be set before `no-littering' is loaded.")
 ;;; Third-party packages
 
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
+    (eval-after-load 'helm
+      `(make-directory ,(var "helm/") t))
+    (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
     (setq mc/list-file                     (var "mc-list.el"))
     (eval-after-load 'projectile
       `(make-directory ,(var "projectile/") t))
