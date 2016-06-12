@@ -171,6 +171,7 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'helm
       `(make-directory ,(var "helm/") t))
     (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
+    (setq helm-github-stars-cache-file     (var "helm/github-stars-cache.el"))
     (setq mc/list-file                     (var "mc-list.el"))
     (eval-after-load 'projectile
       `(make-directory ,(var "projectile/") t))
