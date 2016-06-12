@@ -180,6 +180,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq projectile-known-projects-file   (var "projectile/known-projects.el"))
     (setq request-storage-directory        (var "request/storage/"))
     (setq smex-save-file                   (var "smex-save.el"))
+    (setq sx-cache-directory               (var "sx-cache/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     ))
 
