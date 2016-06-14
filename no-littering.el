@@ -183,6 +183,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq smex-save-file                   (var "smex-save.el"))
     (setq sx-cache-directory               (var "sx-cache/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
+    (setq user-emacs-ensime-directory      (var "ensime/"))
     ))
 
 (provide 'no-littering)
