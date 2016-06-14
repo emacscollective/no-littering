@@ -168,6 +168,7 @@ This variable has to be set before `no-littering' is loaded.")
 ;;; Third-party packages
 
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
+    (setq company-statistics-file          (var "company/statistics.el"))
     (setq emms-directory                   (var "emms/"))
     (eval-after-load 'helm
       `(make-directory ,(var "helm/") t))
@@ -183,7 +184,6 @@ This variable has to be set before `no-littering' is loaded.")
     (setq smex-save-file                   (var "smex-save.el"))
     (setq sx-cache-directory               (var "sx-cache/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
-    (setq company-statistics-file          (var "company-statistics-cache.el"))
     ))
 
 (provide 'no-littering)
