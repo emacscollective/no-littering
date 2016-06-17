@@ -56,10 +56,9 @@ Conventions
 3. If the name of the package and the prefix of the variable do not
    match, then we prefer the name of the package.
 
-4. If the name of a path variable ends with `-file`,
-   `-default-file`, `-directory`, `-default-directory`, `, or
-   something similar, then that suffix is usually dropped from the
-   file name.
+4. If the name of a path variable ends with `-file`, `-default-file`,
+   `-directory`, `-default-directory`, or something similar, then that
+   suffix is usually dropped from the file name.
 
 5. If applicable, the appropriate extension is added to the file name
    so that files are visited using the appropriate major-modes and
