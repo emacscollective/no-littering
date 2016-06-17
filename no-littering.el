@@ -222,6 +222,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq sx-cache-directory               (var "sx-cache/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
+    (setq pcache-directory                 (var "pcache/"))
     ))
 
 (provide 'no-littering)
