@@ -46,25 +46,59 @@ Conventions
 
 ### File names
 
-If a package has only one persistent data file, then that is placed
-in `no-littering-var-directory' itself.  If a package has multiple
-files, then they are placed in a subdirectory, whose file name is
-the name of the package.  Likewise for a package's configuration
-files.
+1. File names are based on the name of the respective Emacs lisp
+   variables and the name of the respective Emacs package.
+   
+2. The name of the respective Emacs package should serve as the
+   prefix of the file name, unless the file is in a subdirectory in
+   which case the name of the subdirectory serves as the prefix.
 
-Additonally a file name should:
+3. If the name of the package and the prefix of the variable do not
+   match, then we prefer the name of the package.
 
-1. Share the prefix of the package that uses it.  For files that
-   are located in a a subdirectory, the name of the directory counts
-   as the prefix.
+4. If the name of a path variable ends with `-file`,
+   `-default-file`, `-directory`, `-default-directory`, `, or
+   something similar, then that suffix is usually dropped from the
+   file name.
 
-2. Reflect the name of the elisp variable that references it.  If
-   you only know the name of the file, it should be trivial to find
-   the variable that references that file in Emacs (e.g. to find
-   its documentation).
+5. If applicable, the appropriate extension is added to the file name
+   so that files are visited using the appropriate major-modes and
+   also to provide a hint about the kind of data stored in the file.
+   E.g.  if a file contains an S-expression, then the suffix should be
+   `*.el`.
 
-3. Use appropriate extensions (if applicable) to signal the content
-   of the file and to trigger the correct major-mode.
+### File location and subdirectories
+
+1. If a package has only one data file, then that is usually placed in
+   `no-littering-var-directory` itself.  Likewise if a package has
+   only one config file, then that is placed in
+   `no-littering-etc-directory` itself.
+  
+2. If a package has multiple data (or config files), then those files
+   are placed in a subdirectory of `no-littering-var-directory` (or
+   `no-littering-var-directory`).
+  
+3. If a subdirectory is used for a package's data (or config) file
+   variables, then the name of the directory should match the name of
+   the package in most cases. The subdirectory name may serve as the
+   package prefix of the file name.
+  
+4. A package that provides a "framework" for other packages to use,
+   then we may reuse its directories for other packages that make use
+   of that framework or otherwise "extend" the "main package".
+   E.g. we place all `helm` related files in `helm/`.
+  
+5. If a package only defines a single variable that specifies a data
+   (or config) directory, then the directory name should
+   nevertheless be just the package name.  E.g. the path used for
+   `sx-cache-directory` from the `sx` package is `sx/cache/`, not
+   `sx-cache/`.
+  
+6. However if the name of the directory variable implies that the
+   package won't ever define any data (or config) files that won't be
+   placed in that directory, then we use a top-level directory.  E.g.
+   when the name of the variable is `<package>-directory`, in which
+   case we would use just `<package>/` as the path.
 
 ### Ordering and alignment
 
