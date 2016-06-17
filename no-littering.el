@@ -227,6 +227,7 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "bmkp/") t))
     (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmarks.el"))
     (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmarks.el"))
+    (setq save-kill-file-name              (var "save-kill.el"))
     ))
 
 (provide 'no-littering)
