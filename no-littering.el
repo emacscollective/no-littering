@@ -223,6 +223,10 @@ This variable has to be set before `no-littering' is loaded.")
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
     (setq pcache-directory                 (var "pcache/"))
+    (eval-after-load 'bookmark+-1
+      `(make-directory ,(var "bmkp/") t))
+    (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmarks.el"))
+    (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmarks.el"))
     ))
 
 (provide 'no-littering)
