@@ -228,6 +228,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmarks.el"))
     (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmarks.el"))
     (setq save-kill-file-name              (var "save-kill.el"))
+    (setq ac-comphist-file                 (var "ac-comphist.el"))
     ))
 
 (provide 'no-littering)
