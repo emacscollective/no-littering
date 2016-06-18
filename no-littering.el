@@ -184,6 +184,10 @@ This variable has to be set before `no-littering' is loaded.")
     (setq image-dired-temp-image-file      (var "image-dired/temp-image"))
     (setq image-dired-temp-rotate-image-file (var "image-dired/temp-rotate-image"))
     (setq image-dired-gallery-dir          (var "image-dired/gallery/"))
+    (eval-after-load 'newsticker
+      `(make-directory ,(var "newsticker/") t))
+    (setq newsticker-dir                   (var "newsticker/data/"))
+    (setq newsticker-cache-filename        (var "newsticker/cache.el"))
     (setq nsm-settings-file                (var "nsm-settings.el"))
     (eval-after-load 'org
       `(make-directory ,(var "org/") t))
