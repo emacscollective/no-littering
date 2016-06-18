@@ -128,3 +128,7 @@ foo: theme variables
 Theme `foo-config-file', `foo-cache-directory',
 and `foo-persistent-file'.
 ```
+
+<!-- Local Variables: -->
+<!-- fill-column: 70 -->
+<!-- End: -->
