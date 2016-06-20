@@ -202,7 +202,12 @@ This variable has to be set before `no-littering' is loaded.")
 
 ;;; Third-party packages
 
+    (setq ac-comphist-file                 (var "ac-comphist.el"))
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
+    (eval-after-load 'bookmark+-1
+      `(make-directory ,(var "bmkp/") t))
+    (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmarks.el"))
+    (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmarks.el"))
     (eval-after-load 'company-statistics
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
@@ -212,24 +217,19 @@ This variable has to be set before `no-littering' is loaded.")
     (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
     (setq helm-github-stars-cache-file     (var "helm/github-stars-cache.el"))
     (setq mc/list-file                     (var "mc-list.el"))
+    (setq org-gcal-dir                     (var "org-gcal/"))
+    (setq pcache-directory                 (var "pcache/"))
     (setq persistent-scratch-save-file     (var "persistent-scratch.el"))
     (eval-after-load 'projectile
       `(make-directory ,(var "projectile/") t))
     (setq projectile-cache-file            (var "projectile/cache.el"))
     (setq projectile-known-projects-file   (var "projectile/known-projects.el"))
     (setq request-storage-directory        (var "request/storage/"))
+    (setq save-kill-file-name              (var "save-kill.el"))
     (setq smex-save-file                   (var "smex-save.el"))
     (setq sx-cache-directory               (var "sx-cache/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
-    (setq pcache-directory                 (var "pcache/"))
-    (eval-after-load 'bookmark+-1
-      `(make-directory ,(var "bmkp/") t))
-    (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmarks.el"))
-    (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmarks.el"))
-    (setq save-kill-file-name              (var "save-kill.el"))
-    (setq ac-comphist-file                 (var "ac-comphist.el"))
-    (setq org-gcal-dir                     (var "org-gcal/"))
     ))
 
 (provide 'no-littering)
