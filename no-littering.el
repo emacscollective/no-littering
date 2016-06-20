@@ -214,8 +214,8 @@ This variable has to be set before `no-littering' is loaded.")
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
     (eval-after-load 'bookmark+-1
       `(make-directory ,(var "bmkp/") t))
-    (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmarks.el"))
-    (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmarks.el"))
+    (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmark.el"))
+    (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmark.el"))
     (eval-after-load 'company-statistics
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
