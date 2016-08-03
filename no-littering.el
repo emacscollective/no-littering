@@ -225,7 +225,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
     (setq helm-github-stars-cache-file     (var "helm/github-stars-cache.el"))
     (setq mc/list-file                     (var "mc-list.el"))
-    (setq org-gcal-dir                     (var "org-gcal/"))
+    (setq org-gcal-dir                     (var "org/gcal/"))
     (setq pcache-directory                 (var "pcache/"))
     (setq persistent-scratch-save-file     (var "persistent-scratch.el"))
     (eval-after-load 'projectile
