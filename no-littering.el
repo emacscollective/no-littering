@@ -245,6 +245,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq sx-cache-directory               (var "sx-cache/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
+    (setq xkcd-cache-dir                   (var "xkcd/"))
     (eval-after-load 'yasnippet
       `(make-directory ,(etc "yas-snippets/") t))
     (setq yas-snippet-dirs                 (list (etc "yas-snippets/") 'yas-installed-snippets-dir))
