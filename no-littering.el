@@ -225,6 +225,7 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
     (setq emms-directory                   (var "emms/"))
+    (setq emojify-emojis-dir               (var "emojify/"))
     (eval-after-load 'helm
       `(make-directory ,(var "helm/") t))
     (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
