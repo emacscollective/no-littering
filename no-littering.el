@@ -225,6 +225,8 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
     (setq emms-directory                   (var "emms/"))
+    (eval-after-load 'emojify
+      `(make-directory ,(var "emojify/") t))
     (setq emojify-emojis-dir               (var "emojify/"))
     (eval-after-load 'helm
       `(make-directory ,(var "helm/") t))
@@ -245,6 +247,8 @@ This variable has to be set before `no-littering' is loaded.")
     (setq sx-cache-directory               (var "sx-cache/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
+    (eval-after-load 'xkcd
+      `(make-directory ,(var "xkcd/") t))
     (setq xkcd-cache-dir                   (var "xkcd/"))
     (eval-after-load 'yasnippet
       `(make-directory ,(etc "yas-snippets/") t))
