@@ -244,15 +244,18 @@ This variable has to be set before `no-littering' is loaded.")
     (setq request-storage-directory        (var "request/storage/"))
     (setq save-kill-file-name              (var "save-kill.el"))
     (setq smex-save-file                   (var "smex-save.el"))
-    (setq sx-cache-directory               (var "sx-cache/"))
+    (eval-after-load 'sx
+      `(make-directory ,(var "sx/cache/") t))
+    (setq sx-cache-directory               (var "sx/cache/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
     (eval-after-load 'xkcd
       `(make-directory ,(var "xkcd/") t))
     (setq xkcd-cache-dir                   (var "xkcd/"))
     (eval-after-load 'yasnippet
-      `(make-directory ,(etc "yas-snippets/") t))
-    (setq yas-snippet-dirs                 (list (etc "yas-snippets/") 'yas-installed-snippets-dir))
+      `(make-directory ,(etc "yasnippet/snippets/") t))
+    (setq yas-snippet-dirs                 (list (etc "yasnippet/snippets/")
+                                                 'yas-installed-snippets-dir))
     ))
 
 (provide 'no-littering)
