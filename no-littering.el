@@ -70,7 +70,7 @@
 ;;
 ;; 1. File names are based on the name of the respective Emacs lisp
 ;;    variables and the name of the respective Emacs package.
-;;   
+;;
 ;; 2. The name of the respective Emacs package should serve as the
 ;;    prefix of the file name, unless the file is in a subdirectory in
 ;;    which case the name of the subdirectory serves as the prefix.
@@ -98,7 +98,7 @@
 ;; 2. If a package has multiple data (or config files), then those files
 ;;    are placed in a subdirectory of `no-littering-var-directory` (or
 ;;    `no-littering-var-directory`).
-;;  
+;;
 ;; 3. If a subdirectory is used for a package's data (or config) file
 ;;    variables, then the name of the directory should match the name of
 ;;    the package in most cases. The subdirectory name may serve as the
