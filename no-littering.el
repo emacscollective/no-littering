@@ -234,6 +234,7 @@ This variable has to be set before `no-littering' is loaded.")
        `(make-directory ,(var "elfeed/") t))
     (setq elfeed-db-directory              (var "elfeed/db/"))
     (setq elfeed-enclosure-default-dir     (var "elfeed/enclosures/"))
+    (setq rmh-elfeed-org-files             (list (var "elfeed/elfeed.org")))
     (setq emms-directory                   (var "emms/"))
     (eval-after-load 'emojify
       `(make-directory ,(var "emojify/") t))
