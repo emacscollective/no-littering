@@ -252,6 +252,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq projectile-cache-file            (var "projectile/cache.el"))
     (setq projectile-known-projects-file   (var "projectile/known-projects.el"))
     (setq request-storage-directory        (var "request/storage/"))
+    (setq rmh-elfeed-org-files             (list (var "elfeed/rmh-elfeed.org")))
     (setq save-kill-file-name              (var "save-kill.el"))
     (setq smex-save-file                   (var "smex-save.el"))
     (eval-after-load 'sx
