@@ -218,6 +218,7 @@ This variable has to be set before `no-littering' is loaded.")
 
     (setq ac-comphist-file                 (var "ac-comphist.el"))
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
+    (setq bm-repository-file               (var "bm-repository.el"))
     (eval-after-load 'bookmark+-1
       `(make-directory ,(var "bmkp/") t))
     (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmark.el"))
