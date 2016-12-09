@@ -176,6 +176,7 @@ This variable has to be set before `no-littering' is loaded.")
 ;;; Built-in packages
 
     (setq abbrev-file-name                 (var "abbrev.el"))
+    (setq auto-insert-directory            (etc "auto-insert/"))
     (setq auto-save-list-file-prefix       (var "auto-save/"))
     (setq backup-directory-alist           (list (cons "." (var "backup/"))))
     (setq bookmark-default-file            (var "bookmark-default.el"))
