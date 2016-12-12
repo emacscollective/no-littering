@@ -211,8 +211,8 @@ This variable has to be set before `no-littering' is loaded.")
     (setq shared-game-score-directory      (var "shared-game-score/"))
     (setq tramp-persistency-file-name      (var "tramp-persistency.el"))
     (setq trash-directory                  (var "trash/"))
-    (setq url-cache-directory              (var "url/"))
-    (setq url-configuration-directory      (etc "url/"))
+    (setq url-cache-directory              (var "url/cache/"))
+    (setq url-configuration-directory      (var "url/configuration/"))
 
 ;;; Third-party packages
 
