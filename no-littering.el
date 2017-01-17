@@ -251,6 +251,10 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "jabber/history/") t))
     (setq mc/list-file                     (var "mc-list.el"))
     (setq org-gcal-dir                     (var "org/gcal/"))
+    (eval-after-load 'org-caldav
+      `(make-directory ,(var "org/caldav/save") t))
+    (setq org-caldav-backup-file           (var "org/caldav/backup.org"))
+    (setq org-caldav-save-directory        (var "org/caldav/save"))
     (setq pcache-directory                 (var "pcache/"))
     (setq persistent-scratch-save-file     (var "persistent-scratch.el"))
     (eval-after-load 'projectile
