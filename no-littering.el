@@ -243,6 +243,12 @@ This variable has to be set before `no-littering' is loaded.")
     (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
     (setq helm-github-stars-cache-file     (var "helm/github-stars-cache.el"))
     (setq irony-user-dir                   (var "irony/"))
+    (setq jabber-avatar-cache-directory    (var "jabber/avatar-cache"))
+    (eval-after-load 'jabber
+      `(make-directory ,(var "jabber/avatar-cache/") t))
+    (setq jabber-history-dir               (var "jabber/history"))
+    (eval-after-load 'jabber
+      `(make-directory ,(var "jabber/history/") t))
     (setq mc/list-file                     (var "mc-list.el"))
     (setq org-gcal-dir                     (var "org/gcal/"))
     (setq pcache-directory                 (var "pcache/"))
