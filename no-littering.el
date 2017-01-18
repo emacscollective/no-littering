@@ -210,7 +210,6 @@ This variable has to be set before `no-littering' is loaded.")
     (setq semanticdb-default-save-directory (var "semantic/"))
     (setq shared-game-score-directory      (var "shared-game-score/"))
     (setq tramp-persistency-file-name      (var "tramp-persistency.el"))
-    (setq trash-directory                  (var "trash/"))
     (setq url-cache-directory              (var "url/cache/"))
     (setq url-configuration-directory      (var "url/configuration/"))
 
