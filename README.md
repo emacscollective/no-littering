@@ -41,6 +41,16 @@ variables before loading the feature.
           (expand-file-name "data/" user-emacs-directory))
     (require 'no-littering)
 
+### Suggested Settings
+
+If you use `recentf` then you might find it convenient to exclude all
+of the files in the `no-littering` directories using something like
+the following.
+
+    (require 'recentf)
+    (add-to-list 'recentf-exclude no-littering-var-directory)
+    (add-to-list 'recentf-exclude no-littering-etc-directory)
+
 Conventions
 -----------
 
