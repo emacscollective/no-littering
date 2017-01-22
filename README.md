@@ -85,7 +85,7 @@ Conventions
   
 2. If a package has multiple data (or config files), then those files
    are placed in a subdirectory of `no-littering-var-directory` (or
-   `no-littering-var-directory`).
+   `no-littering-etc-directory`).
   
 3. If a subdirectory is used for a package's data (or config) file
    variables, then the name of the directory should match the name of
