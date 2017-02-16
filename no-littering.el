@@ -258,6 +258,7 @@ directories."
     (eval-after-load 'jabber
       `(make-directory ,(var "jabber/history/") t))
     (setq mc/list-file                     (var "mc-list.el"))
+    (setq multi-compile-history-file       (var "multi-compile-history.el"))
     (setq org-gcal-dir                     (var "org/gcal/"))
     (eval-after-load 'org-caldav
       `(make-directory ,(var "org/caldav/save") t))
