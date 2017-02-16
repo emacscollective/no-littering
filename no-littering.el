@@ -274,6 +274,7 @@ directories."
     (setq rmh-elfeed-org-files             (list (var "elfeed/rmh-elfeed.org")))
     (setq runner-init-file                 (var "runner-init.el"))
     (setq save-kill-file-name              (var "save-kill.el"))
+    (setq save-visited-files-location      (var "save-visited-files-location"))
     (setq smex-save-file                   (var "smex-save.el"))
     (setq speed-type-gb-dir                (var "speed-type/"))
     (eval-after-load 'sx
