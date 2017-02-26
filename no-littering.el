@@ -266,6 +266,7 @@ directories."
     (setq org-caldav-save-directory        (var "org/caldav/save"))
     (setq pcache-directory                 (var "pcache/"))
     (setq persistent-scratch-save-file     (var "persistent-scratch.el"))
+    (setq persp-save-dir                   (var "persp-mode/"))
     (eval-after-load 'projectile
       `(make-directory ,(var "projectile/") t))
     (setq projectile-cache-file            (var "projectile/cache.el"))
