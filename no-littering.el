@@ -167,10 +167,30 @@ This variable has to be set before `no-littering' is loaded.")
   "The directory where packages place their persistent data files.
 This variable has to be set before `no-littering' is loaded.")
 
-(cl-flet ((etc (file) (expand-file-name (convert-standard-filename file)
-                                        no-littering-etc-directory))
-          (var (file) (expand-file-name (convert-standard-filename file)
-                                        no-littering-var-directory)))
+(defun no-littering-directory (file subdir &optional create)
+  (setq file (expand-file-name (convert-standard-filename file) subdir))
+  (when create
+    (make-directory (file-name-directory file) 'make-parents))
+  file)
+
+(defun no-littering-var-directory (file &optional create)
+  "Expand filename FILE relative to `no-littering-var-directory'.
+
+E.g. \"foo/bar\" -> \"/home/user/.emacs.d/var/foo/bar\"
+
+If optional argument CREATE is non-nil, create any parent directories."
+  (no-littering-directory file no-littering-var-directory create))
+
+(defun no-littering-etc-directory (file &optional create)
+  "Expand filename FILE relative to `no-littering-etc-directory'.
+
+E.g. \"foo/bar\" -> \"/home/user/.emacs.d/etc/foo/bar\"
+
+If optional argument CREATE is non-nil, create any parent directories."
+  (no-littering-directory file no-littering-etc-directory create))
+
+(cl-letf (((symbol-function 'etc) (symbol-function #'no-littering-etc-directory))
+          ((symbol-function 'var) (symbol-function #'no-littering-var-directory)))
   (with-no-warnings ; many of these variables haven't been defined yet
 
 ;;; Built-in packages
