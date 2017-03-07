@@ -198,9 +198,6 @@ If optional argument CREATE is non-nil, create any parent directories."
     (setq abbrev-file-name                 (var "abbrev.el"))
     (setq auto-insert-directory            (etc "auto-insert/"))
     (setq auto-save-list-file-prefix       (var "auto-save-lists/"))
-    (eval-after-load 'files
-      `(make-directory ,(var "auto-save/")))
-    (setq auto-save-file-name-transforms   (list (list ".*" (var "auto-save/") t)))
     (setq backup-directory-alist           (list (cons "." (var "backup/"))))
     (setq bookmark-default-file            (var "bookmark-default.el"))
     (eval-after-load 'desktop
