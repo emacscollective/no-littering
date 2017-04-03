@@ -58,7 +58,7 @@ Conventions
 
 1. File names are based on the name of the respective Emacs lisp
    variables and the name of the respective Emacs package.
-   
+
 2. The name of the respective Emacs package should serve as the
    prefix of the file name, unless the file is in a subdirectory in
    which case the name of the subdirectory serves as the prefix.
@@ -82,27 +82,27 @@ Conventions
    `no-littering-var-directory` itself.  Likewise if a package has
    only one config file, then that is placed in
    `no-littering-etc-directory` itself.
-  
+
 2. If a package has multiple data (or config files), then those files
    are placed in a subdirectory of `no-littering-var-directory` (or
    `no-littering-etc-directory`).
-  
+
 3. If a subdirectory is used for a package's data (or config) file
    variables, then the name of the directory should match the name of
    the package in most cases. The subdirectory name may serve as the
    package prefix of the file name.
-  
+
 4. A package that provides a "framework" for other packages to use,
    then we may reuse its directories for other packages that make use
    of that framework or otherwise "extend" the "main package".
    E.g. we place all `helm` related files in `helm/`.
-  
+
 5. If a package only defines a single variable that specifies a data
    (or config) directory, then the directory name should
    nevertheless be just the package name.  E.g. the path used for
    `sx-cache-directory` from the `sx` package is `sx/cache/`, not
    `sx-cache/`.
-  
+
 6. However if the name of the directory variable implies that the
    package won't ever define any data (or config) files that won't be
    placed in that directory, then we use a top-level directory.  E.g.
