@@ -167,10 +167,20 @@ This variable has to be set before `no-littering' is loaded.")
   "The directory where packages place their persistent data files.
 This variable has to be set before `no-littering' is loaded.")
 
-(cl-flet ((etc (file) (expand-file-name (convert-standard-filename file)
-                                        no-littering-etc-directory))
-          (var (file) (expand-file-name (convert-standard-filename file)
-                                        no-littering-var-directory)))
+(defun no-littering-expand-etc-file-name (file)
+  "Expand filename FILE relative to `no-littering-etc-directory'."
+  (expand-file-name (convert-standard-filename file)
+                    no-littering-etc-directory))
+
+(defun no-littering-expand-var-file-name (file)
+  "Expand filename FILE relative to `no-littering-var-directory'."
+  (expand-file-name (convert-standard-filename file)
+                    no-littering-var-directory))
+
+(cl-letf (((symbol-function 'etc)
+           (symbol-function #'no-littering-expand-etc-file-name))
+          ((symbol-function 'var)
+           (symbol-function #'no-littering-expand-var-file-name)))
   (with-no-warnings ; many of these variables haven't been defined yet
 
 ;;; Built-in packages
