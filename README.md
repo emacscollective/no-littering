@@ -51,6 +51,17 @@ the following.
     (add-to-list 'recentf-exclude no-littering-var-directory)
     (add-to-list 'recentf-exclude no-littering-etc-directory)
 
+#### Auto-save settings
+
+One of the most common types of files that Emacs creates automatically
+is auto-save files.  By default, these appear in the current directory
+of a visited file.  No-littering does not change this, but you can add
+the following code to your init.el to store these files in the var
+directory:
+
+    (setq auto-save-file-name-transforms
+          (list (list ".*" (no-littering-var-directory "auto-save/" t) t)))
+
 Conventions
 -----------
 
