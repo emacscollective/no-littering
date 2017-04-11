@@ -167,10 +167,19 @@ This variable has to be set before `no-littering' is loaded.")
   "The directory where packages place their persistent data files.
 This variable has to be set before `no-littering' is loaded.")
 
-(cl-flet ((etc (file) (expand-file-name (convert-standard-filename file)
-                                        no-littering-etc-directory))
-          (var (file) (expand-file-name (convert-standard-filename file)
-                                        no-littering-var-directory)))
+(defun no-littering-make-path (base-directory file &optional sub-directory)
+  "Return path for FILE in BASE-DIRECTORY or optionally
+SUB-DIRECTORY. The directory is created if it does not exist."
+  (let ((dir (concat base-directory
+                     (when sub-directory
+                       (convert-standard-filename sub-directory)))))
+    (make-directory dir t)
+    (expand-file-name (convert-standard-filename file) dir)))
+
+(cl-flet ((etc (apply-partially #'no-littering-make-path
+                                no-littering-etc-directory))
+          (var (apply-partially #'no-littering-make-path
+                                no-littering-var-directory)))
   (with-no-warnings ; many of these variables haven't been defined yet
 
 ;;; Built-in packages
