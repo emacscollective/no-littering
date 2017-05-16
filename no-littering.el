@@ -269,6 +269,8 @@ directories."
     (setq jabber-history-dir               (var "jabber/history"))
     (eval-after-load 'jabber
       `(make-directory ,(var "jabber/history/") t))
+    (setq magithub-dir                     (var "magithub/"))
+    (setq magithub-cache-file              (var "magithub/cache.el"))
     (setq mc/list-file                     (var "mc-list.el"))
     (setq multi-compile-history-file       (var "multi-compile-history.el"))
     (setq org-gcal-dir                     (var "org/gcal/"))
