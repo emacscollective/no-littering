@@ -295,6 +295,7 @@ directories."
     (eval-after-load 'sx
       `(make-directory ,(var "sx/cache/") t))
     (setq sx-cache-directory               (var "sx/cache/"))
+    (setq tldr-directory-path              (var "tldr/")
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
     (eval-after-load 'xkcd
