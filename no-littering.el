@@ -193,6 +193,7 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'desktop
       `(make-directory ,(var "desktop/") t))
     (setq desktop-path                     (list (var "desktop/")))
+    (setq epkg-repository                  (var "epkgs/"))
     (setq eshell-directory-name            (var "eshell/"))
     (eval-after-load 'eww
       `(make-directory ,(var "eww/") t))
