@@ -301,6 +301,7 @@ directories."
     (setq tldr-directory-path              (var "tldr/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
+    (setq vimish-fold-dir                  (var "vimish-fold/"))
     (eval-after-load 'xkcd
       `(make-directory ,(var "xkcd/") t))
     (setq xkcd-cache-dir                   (var "xkcd/"))
