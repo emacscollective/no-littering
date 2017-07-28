@@ -243,7 +243,7 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
     (eval-after-load 'elfeed
-       `(make-directory ,(var "elfeed/") t))
+      `(make-directory ,(var "elfeed/") t))
     (setq elfeed-db-directory              (var "elfeed/db/"))
     (setq elfeed-enclosure-default-dir     (var "elfeed/enclosures/"))
     (eval-after-load 'x-win
