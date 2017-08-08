@@ -259,6 +259,9 @@ directories."
     (eval-after-load 'emojify
       `(make-directory ,(var "emojify/") t))
     (setq emojify-emojis-dir               (var "emojify/"))
+    (eval-after-load 'geiser
+      `(make-directory ,(var "geiser/") t))
+    (setq geiser-repl-history-filename     (var "geiser/history"))
     (eval-after-load 'helm
       `(make-directory ,(var "helm/") t))
     (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
