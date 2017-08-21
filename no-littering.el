@@ -290,6 +290,9 @@ directories."
     (setq jabber-history-dir               (var "jabber/history"))
     (eval-after-load 'jabber
       `(make-directory ,(var "jabber/history/") t))
+    (eval-after-load 'lookup
+      `(make-directory ,(etc "lookup/") t))
+    (setq lookup-init-directory            (etc "lookup/"))
     (setq magithub-dir                     (var "magithub/"))
     (setq magithub-cache-file              (var "magithub/cache.el"))
     (setq mc/list-file                     (var "mc-list.el"))
