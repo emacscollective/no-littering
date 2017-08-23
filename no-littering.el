@@ -217,6 +217,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq image-dired-gallery-dir          (var "image-dired/gallery/"))
     (setq image-dired-temp-image-file      (var "image-dired/temp-image"))
     (setq image-dired-temp-rotate-image-file (var "image-dired/temp-rotate-image"))
+    (setq kkc-init-file-name               (var "kkcrc.el"))
     (eval-after-load 'newsticker
       `(make-directory ,(var "newsticker/") t))
     (setq newsticker-cache-filename        (var "newsticker/cache.el"))
@@ -242,6 +243,7 @@ This variable has to be set before `no-littering' is loaded.")
 
     (setq ac-comphist-file                 (var "ac-comphist.el"))
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
+    (setq async-byte-compile-log-file      (var "async-bytecomp.log"))
     (eval-after-load 'bbdb
       `(make-directory ,(var "bbdb/") t))
     (setq bbdb-file                        (var "bbdb/bbdb.el"))
@@ -271,6 +273,9 @@ directories."
     (eval-after-load 'emojify
       `(make-directory ,(var "emojify/") t))
     (setq emojify-emojis-dir               (var "emojify/"))
+    (eval-after-load 'geiser
+      `(make-directory ,(var "geiser/") t))
+    (setq geiser-repl-history-filename     (var "geiser/history"))
     (eval-after-load 'helm
       `(make-directory ,(var "helm/") t))
     (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
@@ -285,10 +290,14 @@ directories."
     (setq jabber-history-dir               (var "jabber/history"))
     (eval-after-load 'jabber
       `(make-directory ,(var "jabber/history/") t))
+    (eval-after-load 'lookup
+      `(make-directory ,(etc "lookup/") t))
+    (setq lookup-init-directory            (etc "lookup/"))
     (setq magithub-dir                     (var "magithub/"))
     (setq magithub-cache-file              (var "magithub/cache.el"))
     (setq mc/list-file                     (var "mc-list.el"))
     (setq multi-compile-history-file       (var "multi-compile-history.el"))
+    (setq notmuch-init-file                (etc "notmuch-config"))
     (setq org-gcal-dir                     (var "org/gcal/"))
     (eval-after-load 'org-caldav
       `(make-directory ,(var "org/caldav/save") t))
@@ -301,6 +310,7 @@ directories."
       `(make-directory ,(var "projectile/") t))
     (setq projectile-cache-file            (var "projectile/cache.el"))
     (setq projectile-known-projects-file   (var "projectile/known-projects.el"))
+    (setq quack-dir                        (var "quack/"))
     (setq request-storage-directory        (var "request/storage/"))
     (setq rmh-elfeed-org-files             (list (var "elfeed/rmh-elfeed.org")))
     (setq runner-init-file                 (var "runner-init.el"))
