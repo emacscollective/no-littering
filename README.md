@@ -65,7 +65,7 @@ var directory:
 Conventions
 -----------
 
-### File names
+### (A) File names
 
 1. File names are based on the name of the respective Emacs lisp
    variables and the name of the respective Emacs package.
@@ -87,7 +87,7 @@ Conventions
    E.g.  if a file contains an S-expression, then the suffix should be
    `*.el`.
 
-### File location and subdirectories
+### (B) File location and subdirectories
 
 1. If a package has only one data file, then that is usually placed in
    `no-littering-var-directory` itself.  Likewise if a package has
@@ -120,7 +120,7 @@ Conventions
    when the name of the variable is `<package>-directory`, in which
    case we would use just `<package>/` as the path.
 
-### Ordering and alignment
+### (C) Ordering and alignment
 
 1. The code that sets the values of themed variables is split into two
    groups.  The first group sets the value of variables that belong to
@@ -136,10 +136,10 @@ Conventions
    If it turns out that this happens very often, then we will adjust
    the alignment eventually.
 
-### Commit messages
+### (D) Commit messages
 
 1. Please theme each package using a separate commit and use commit
-   messages of the form "<package>: theme <variable".
+   messages of the form `PACKAGE: theme VARIABLE`.
 
 2. If a package has several path variables, then you should theme them
    all in one commit.
@@ -153,6 +153,19 @@ foo: theme variables
 Theme `foo-config-file', `foo-cache-directory',
 and `foo-persistent-file'.
 ```
+
+4. When appropriate add statements like the following to the commit
+   message:
+
+   - This file is used to store an s-expression.
+   - This file is used to store raw text.
+   - This is the only configuration/data file of the package.
+   - This package does/doesn't take care of creating the containing
+     directory if necessary. (If the package does not do it, then you
+     should also fix that and submit an upstream pull request.)
+
+5. If you are uncertain, then be explicit about it by adding a comment
+   to the pull-request.
 
 <!-- Local Variables: -->
 <!-- fill-column: 70 -->
