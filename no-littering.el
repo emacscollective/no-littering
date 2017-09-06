@@ -217,6 +217,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq image-dired-gallery-dir          (var "image-dired/gallery/"))
     (setq image-dired-temp-image-file      (var "image-dired/temp-image"))
     (setq image-dired-temp-rotate-image-file (var "image-dired/temp-rotate-image"))
+    (setq kkc-init-file-name               (var "kkc-init.el"))
     (eval-after-load 'newsticker
       `(make-directory ,(var "newsticker/") t))
     (setq newsticker-cache-filename        (var "newsticker/cache.el"))
