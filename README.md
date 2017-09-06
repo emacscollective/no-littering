@@ -20,7 +20,8 @@ color-theme; a "path-theme" if you will.
 We still have a long way to go until most built-in and many
 third-party path variables are properly "themed".  Like a color-theme,
 this package depends on user contributions to accomplish decent
-coverage.  Pull requests are highly welcome.
+coverage.  Pull requests are highly welcome (but please follow the
+conventions described below and in the pull request template).
 
 Usage
 -----
