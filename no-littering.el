@@ -245,6 +245,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq ac-comphist-file                 (var "ac-comphist.el"))
     (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
     (setq async-byte-compile-log-file      (var "async-bytecomp.log"))
+    (setq apu--last-update-day-path        (var "auto-package-update-last-update-day"))
     (eval-after-load 'bbdb
       `(make-directory ,(var "bbdb/") t))
     (setq bbdb-file                        (var "bbdb/bbdb.el"))
