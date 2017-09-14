@@ -61,7 +61,7 @@ the following code to your `init.el` file to store these files in the
 var directory:
 
     (setq auto-save-file-name-transforms
-          `((".*" ,(no-littering-expand-var-file-name "auto-save/") t))))
+          `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 
 Conventions
 -----------
