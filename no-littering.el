@@ -226,6 +226,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq nsm-settings-file                (var "nsm-settings.el"))
     (eval-after-load 'org
       `(make-directory ,(var "org/") t))
+    (setq omnisharp-cache-directory        (var "omnisharp/cache"))
     (setq org-clock-persist-file           (var "org/clock-persist.el"))
     (setq org-id-locations-file            (var "org/id-locations.el"))
     (setq org-publish-timestamp-directory  (var "org/timestamps/"))
