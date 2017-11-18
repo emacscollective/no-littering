@@ -205,7 +205,8 @@ This variable has to be set before `no-littering' is loaded.")
     (setq bookmark-default-file            (var "bookmark-default.el"))
     (eval-after-load 'desktop
       `(make-directory ,(var "desktop/") t))
-    (setq desktop-path                     (list (var "desktop/")))
+    (setq desktop-dirname                  (var "desktop/"))
+    (setq desktop-path                     (list desktop-dirname))
     (setq epkg-repository                  (var "epkgs/"))
     (setq eshell-directory-name            (var "eshell/"))
     (eval-after-load 'eww
