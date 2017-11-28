@@ -283,6 +283,7 @@ directories."
     (eval-after-load 'helm
       `(make-directory ,(var "helm/") t))
     (setq helm-adaptive-history-file       (var "helm/adaptive-history.el"))
+    (setq helm-backup-path                 (var "helm/backup/"))
     (setq helm-github-stars-cache-file     (var "helm/github-stars-cache.el"))
     (setq historian-save-file              (var "historian-save.el"))
     (setq indium-workspace-file            (var "indium/workspaces.el"))
