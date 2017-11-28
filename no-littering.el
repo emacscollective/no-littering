@@ -296,6 +296,7 @@ directories."
       `(make-directory ,(var "jabber/history/") t))
     (eval-after-load 'lookup
       `(make-directory ,(etc "lookup/") t))
+    (setq litable-list-file                (var "litable-list.el"))
     (setq lookup-init-directory            (etc "lookup/"))
     (setq magithub-dir                     (var "magithub/"))
     (setq magithub-cache-file              (var "magithub/cache.el"))
