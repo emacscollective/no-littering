@@ -245,7 +245,7 @@ This variable has to be set before `no-littering' is loaded.")
 ;;; Third-party packages
 
     (setq ac-comphist-file                 (var "ac-comphist.el"))
-    (setq anaconda-mode-installation-directory (etc "anaconda-mode/"))
+    (setq anaconda-mode-installation-directory (var "anaconda-mode/"))
     (setq async-byte-compile-log-file      (var "async-bytecomp.log"))
     (eval-after-load 'bbdb
       `(make-directory ,(var "bbdb/") t))
