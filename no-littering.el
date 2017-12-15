@@ -260,7 +260,7 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'company-statistics
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
-    (setq elbank-data-file                 (var "elbank-data.json"))
+    (setq elbank-data-file                 (var "elbank-data.el"))
     (eval-after-load 'elfeed
       `(make-directory ,(var "elfeed/") t))
     (setq elfeed-db-directory              (var "elfeed/db/"))
