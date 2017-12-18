@@ -278,6 +278,7 @@ directories."
     (eval-after-load 'emojify
       `(make-directory ,(var "emojify/") t))
     (setq emojify-emojis-dir               (var "emojify/"))
+    (setq geben-temporary-file-directory   (var "geben/"))
     (eval-after-load 'geiser
       `(make-directory ,(var "geiser/") t))
     (setq geiser-repl-history-filename     (var "geiser/repl-history"))
