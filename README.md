@@ -63,6 +63,16 @@ var directory:
     (setq auto-save-file-name-transforms
           `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 
+#### Saved customizations
+
+Emacs will save [customizations] into your `init.el` file by default.
+If you don't want that, you might want to store them in a sibling file
+or even in the `etc/` directory:
+
+    (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+	;; or
+    (setq custom-file (no-littering-expand-etc-file-name "custom.el"))
+
 Conventions
 -----------
 
@@ -167,6 +177,8 @@ and `foo-persistent-file'.
 
 5. If you are uncertain, then be explicit about it by adding a comment
    to the pull-request.
+
+[customizations]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html
 
 <!-- Local Variables: -->
 <!-- fill-column: 70 -->
