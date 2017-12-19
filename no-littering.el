@@ -207,6 +207,7 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "desktop/") t))
     (setq desktop-dirname                  (var "desktop/"))
     (setq desktop-path                     (list desktop-dirname))
+    (setq diary-file                       (var "diary"))
     (setq epkg-repository                  (var "epkgs/"))
     (setq eshell-directory-name            (var "eshell/"))
     (eval-after-load 'eww
