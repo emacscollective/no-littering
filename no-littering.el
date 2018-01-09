@@ -300,6 +300,8 @@ directories."
     (setq jabber-history-dir               (var "jabber/history"))
     (eval-after-load 'jabber
       `(make-directory ,(var "jabber/history/") t))
+    (setq keyfreq-file                     (var "keyfreq.el"))
+    (setq keyfreq-file-lock                (var "keyfreq.lock"))
     (eval-after-load 'lookup
       `(make-directory ,(etc "lookup/") t))
     (setq litable-list-file                (var "litable-list.el"))
