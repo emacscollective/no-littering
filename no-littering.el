@@ -315,6 +315,7 @@ directories."
     ;; actual file name MUST end with ".el".  Use "git blame" for
     ;; more information.
     (setq notmuch-init-file                (etc "notmuch-init"))
+    (setq nov-save-place-file              (var "nov-save-place.el"))
     (setq org-gcal-dir                     (var "org/gcal/"))
     (eval-after-load 'org-caldav
       `(make-directory ,(var "org/caldav/save") t))
