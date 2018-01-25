@@ -349,8 +349,7 @@ directories."
     (setq xkcd-cache-dir                   (var "xkcd/"))
     (eval-after-load 'yasnippet
       `(make-directory ,(etc "yasnippet/snippets/") t))
-    (setq yas-snippet-dirs                 (list (etc "yasnippet/snippets/")
-                                                 'yas-installed-snippets-dir))
+    (setq yas-snippet-dirs                 (list (etc "yasnippet/snippets/")))
     ))
 
 (provide 'no-littering)
