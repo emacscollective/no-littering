@@ -352,6 +352,7 @@ directories."
     (setq yas-snippet-dirs                 (list (etc "yasnippet/snippets/")))
     ))
 
+;;; _
 (provide 'no-littering)
 ;; Local Variables:
 ;; indent-tabs-mode: nil
