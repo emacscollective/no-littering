@@ -328,6 +328,8 @@ directories."
       `(make-directory ,(var "projectile/") t))
     (setq projectile-cache-file            (var "projectile/cache.el"))
     (setq projectile-known-projects-file   (var "projectile/known-projects.el"))
+    (setq purpose-default-layout-file      (etc "window-purpose/default-layout.el"))
+    (setq purpose-layout-dirs              (list (etc "window-purpose/layouts/")))
     (setq pyim-dcache-directory            (var "pyim/dcache/"))
     (setq quack-dir                        (var "quack/"))
     (setq request-storage-directory        (var "request/storage/"))
