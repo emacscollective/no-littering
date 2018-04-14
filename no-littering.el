@@ -35,11 +35,11 @@
 ;; insight into what package might have created them.
 
 ;; This package sets out to fix this by changing the values of path
-;; variables to put files in either `no-littering-etc-directory'
-;; (defaulting to "~/.emacs.d/etc/") or `no-littering-var-directory'
-;; (defaulting to "~/.emacs.d/var/"), and by using descriptive file
-;; names and subdirectories when appropriate.  This is similar to a
-;; color-theme; a "path-theme" if you will.
+;; variables to put configuration files in `no-littering-etc-directory'
+;; (defaulting to "~/.emacs.d/etc/") and persistent data files in
+;; `no-littering-var-directory' (defaulting to "~/.emacs.d/var/"), and
+;; by using descriptive file names and subdirectories when appropriate.
+;; This is similar to a color-theme; a "path-theme" if you will.
 
 ;; We still have a long way to go until most built-in and many third-
 ;; party path variables are properly "themed".  Like a color-theme,
