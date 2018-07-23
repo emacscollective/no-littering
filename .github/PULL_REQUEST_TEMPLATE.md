@@ -1,3 +1,7 @@
+Please use a dedicated feature branch.  This is why:
+
+     https://github.com/magit/magit/wiki/Dedicated-pull-request-branches
+
 Please try to follow the conventions.
 
      https://github.com/tarsius/no-littering#conventions
