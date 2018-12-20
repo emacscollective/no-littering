@@ -310,6 +310,7 @@ directories."
       `(make-directory ,(etc "lookup/") t))
     (setq litable-list-file                (var "litable-list.el"))
     (setq lookup-init-directory            (etc "lookup/"))
+    (setq lsp-session-file                 (var "lsp-session.el"))
     (setq magithub-dir                     (var "magithub/"))
     (setq magithub-cache-file              (var "magithub/cache.el"))
     (setq mc/list-file                     (var "mc-list.el"))
