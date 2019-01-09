@@ -1,6 +1,6 @@
 ;;; no-littering.el --- help keeping ~/.emacs.d clean
 
-;; Copyright (C) 2016-2018  Jonas Bernoulli
+;; Copyright (C) 2016-2019  Jonas Bernoulli
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
@@ -349,6 +349,7 @@ directories."
       `(make-directory ,(var "sx/cache/") t))
     (setq sx-cache-directory               (var "sx/cache/"))
     (setq tldr-directory-path              (var "tldr/"))
+    (setq transient-history-file           (var "transient/history.el"))
     (setq transient-values-file            (etc "transient/values.el"))
     (setq treemacs-persist-file            (var "treemacs-persist.org"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
