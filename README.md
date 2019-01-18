@@ -23,6 +23,11 @@ this package depends on user contributions to accomplish decent
 coverage.  Pull requests are highly welcome (but please follow the
 conventions described below and in the pull request template).
 
+`no-littering` cannot help with moving existing files to the new
+location.  You will have to move the files manually.  See issue
+[#79](https://github.com/emacscollective/no-littering/issues/79)
+for more information.
+
 Usage
 -----
 
