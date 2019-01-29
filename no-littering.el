@@ -354,6 +354,7 @@ directories."
     (setq sx-cache-directory               (var "sx/cache/"))
     (setq tldr-directory-path              (var "tldr/"))
     (setq transient-history-file           (var "transient/history.el"))
+    (setq transient-levels-file            (etc "transient/levels.el"))
     (setq transient-values-file            (etc "transient/values.el"))
     (setq treemacs-persist-file            (var "treemacs-persist.org"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
