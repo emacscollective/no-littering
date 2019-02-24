@@ -314,6 +314,8 @@ directories."
     (eval-after-load 'lookup
       `(make-directory ,(etc "lookup/") t))
     (setq litable-list-file                (var "litable-list.el"))
+    (setq logview-cache-filename           (var "logview-cache"))
+    (setq logview-views-file               (etc "logview-views"))
     (setq lookup-init-directory            (etc "lookup/"))
     (setq lsp-session-file                 (var "lsp-session.el"))
     (setq magithub-dir                     (var "magithub/"))
