@@ -267,6 +267,7 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'company-statistics
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
+    (setq dap--breakpoints-file            (var "dap-breakpoints"))
     (setq dired-recent-directories-file    (var "dired-recent-directories.el"))
     (setq elbank-data-file                 (var "elbank-data.el"))
     (eval-after-load 'elfeed
