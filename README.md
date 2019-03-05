@@ -63,7 +63,7 @@ One of the most common types of files that Emacs creates automatically
 is auto-save files.  By default, these appear in the current directory
 of a visited file.  No-littering does not change this, but you can add
 the following code to your `init.el` file to store these files in the
-var directory:
+`var` directory:
 
     (setq auto-save-file-name-transforms
           `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
