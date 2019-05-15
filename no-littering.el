@@ -264,6 +264,7 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "bmkp/") t))
     (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmark.el"))
     (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmark.el"))
+    (setq bookiez-file                     (var "bookiez"))
     (eval-after-load 'company
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
