@@ -264,9 +264,10 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "bmkp/") t))
     (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmark.el"))
     (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmark.el"))
-    (eval-after-load 'company-statistics
+    (eval-after-load 'company
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
+    (setq company-tabnine-binaries-folder  (var "company/tabnine-binaries"))
     (setq dap--breakpoints-file            (var "dap-breakpoints"))
     (setq dap-java-test-runner             (var "lsp-java/eclipse.jdt.ls/test-runner/junit-platform-console-standalone.jar"))
     (setq dired-recent-directories-file    (var "dired-recent-directories.el"))
