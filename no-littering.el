@@ -272,6 +272,8 @@ This variable has to be set before `no-littering' is loaded.")
     (setq dap-java-test-runner             (var "lsp-java/eclipse.jdt.ls/test-runner/junit-platform-console-standalone.jar"))
     (setq dired-recent-directories-file    (var "dired-recent-directories.el"))
     (setq elbank-data-file                 (var "elbank-data.el"))
+    (setq elmo-msgdb-directory             (var "elmo/"))
+    (setq elmo-split-log-file              (var "elmo/split-log"))
     (eval-after-load 'elfeed
       `(make-directory ,(var "elfeed/") t))
     (setq elfeed-db-directory              (var "elfeed/db/"))
