@@ -368,6 +368,14 @@ directories."
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
     (setq vimish-fold-dir                  (var "vimish-fold/"))
+    (eval-after-load 'wl
+      `(make-directory ,(etc "wanderlust") t))
+    (setq wl-init-file                     (etc "wanderlust/init.el"))
+    (setq wl-folders-file                  (etc "wanderlust/folders"))
+    (setq wl-address-file                  (etc "wanderlust/address"))
+    (setq wl-alias-file                    (etc "wanderlust/alias"))
+    (setq wl-x-face-file                   (etc "wanderlust/x-face"))
+    (setq wl-temporary-file-directory      (var "wanderlust-tmp"))
     (eval-after-load 'xkcd
       `(make-directory ,(var "xkcd/") t))
     (setq xkcd-cache-dir                   (var "xkcd/"))
