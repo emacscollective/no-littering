@@ -378,6 +378,7 @@ directories."
     (setq wl-alias-file                    (etc "wanderlust/alias"))
     (setq wl-x-face-file                   (etc "wanderlust/x-face"))
     (setq wl-temporary-file-directory      (var "wanderlust-tmp"))
+    (setq x86-lookup-cache-directory       (var "x86-lookup/cache/"))
     (eval-after-load 'xkcd
       `(make-directory ,(var "xkcd/") t))
     (setq xkcd-cache-dir                   (var "xkcd/"))
