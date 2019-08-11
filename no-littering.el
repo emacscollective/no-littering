@@ -347,6 +347,7 @@ directories."
     (setq persp-save-dir                   (var "persp-mode/"))
     (eval-after-load 'projectile
       `(make-directory ,(var "projectile/") t))
+    (setq prescient-save-file              (var "prescient-save.el"))
     (setq projectile-cache-file            (var "projectile/cache.el"))
     (setq projectile-known-projects-file   (var "projectile/known-projects.el"))
     (setq purpose-default-layout-file      (etc "window-purpose/default-layout.el"))
