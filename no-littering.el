@@ -342,6 +342,7 @@ directories."
     (setq org-caldav-backup-file           (var "org/caldav/backup.org"))
     (setq org-caldav-save-directory        (var "org/caldav/save"))
     (setq org-journal-cache-file           (var "org/journal-cache.el"))
+    (setq org-recent-headings-save-file    (var "org/recent-headings.el"))
     (setq pandoc-data-dir                  (etc "pandoc-mode/"))
     (setq pcache-directory                 (var "pcache/"))
     (setq persistent-scratch-save-file     (var "persistent-scratch.el"))
