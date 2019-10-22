@@ -267,6 +267,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq bookiez-file                     (var "bookiez"))
     (eval-after-load 'company
       `(make-directory ,(var "company/") t))
+    (setq cider-repl-history-file          (var "cider-repl-history.el"))
     (setq company-statistics-file          (var "company/statistics.el"))
     (setq company-tabnine-binaries-folder  (var "company/tabnine-binaries"))
     (setq dap--breakpoints-file            (var "dap-breakpoints"))
