@@ -325,6 +325,7 @@ directories."
     (setq logview-cache-filename           (var "logview-cache"))
     (setq logview-views-file               (etc "logview-views"))
     (setq lookup-init-directory            (etc "lookup/"))
+    (setq lsp-python-ms-dir                (var "lsp-python-ms/"))
     (setq lsp-session-file                 (var "lsp-session.el"))
     (setq lsp-java-workspace-dir           (var "lsp-java/workspace/"))
     (setq lsp-java-server-install-dir      (var "lsp-java/eclipse.jdt.ls/server/"))
