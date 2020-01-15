@@ -1,6 +1,6 @@
 ;;; no-littering.el --- help keeping ~/.emacs.d clean
 
-;; Copyright (C) 2016-2019  Jonas Bernoulli
+;; Copyright (C) 2016-2020  Jonas Bernoulli
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
@@ -328,7 +328,7 @@ directories."
     (setq logview-views-file               (etc "logview-views"))
     (setq lookup-init-directory            (etc "lookup/"))
     (setq lsp-python-ms-dir                (var "lsp-python-ms/"))
-    (setq lsp-session-file                 (var "lsp-session.el"))
+    (setq lsp-session-file                 (var "lsp/session.el"))
     (setq lsp-java-workspace-dir           (var "lsp-java/workspace/"))
     (setq lsp-java-server-install-dir      (var "lsp-java/eclipse.jdt.ls/server/"))
     (setq magithub-dir                     (var "magithub/"))
