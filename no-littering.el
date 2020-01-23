@@ -229,6 +229,7 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "newsticker/") t))
     (setq newsticker-cache-filename        (var "newsticker/cache.el"))
     (setq newsticker-dir                   (var "newsticker/data/"))
+    (setq nix-buffer-directory-name        (var "nix-buffer/"))
     (setq nsm-settings-file                (var "nsm-settings.el"))
     (eval-after-load 'org
       `(make-directory ,(var "org/") t))
