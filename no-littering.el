@@ -380,6 +380,7 @@ directories."
     (setq transient-values-file            (etc "transient/values.el"))
     (setq treemacs-persist-file            (var "treemacs/persist.org"))
     (setq treemacs-last-error-persist-file (var "treemacs/persist-last-error.org"))
+    (setq undo-fu-session-directory        (var "undo-fu-session/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
     (setq vimish-fold-dir                  (var "vimish-fold/"))
