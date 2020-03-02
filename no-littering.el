@@ -329,6 +329,8 @@ directories."
       `(make-directory ,(etc "lookup/") t))
     (setq lookup-init-directory            (etc "lookup/"))
     (setq lsp-python-ms-dir                (var "lsp-python-ms/"))
+    (eval-after-load 'lsp-mode
+      `(make-directory ,(var "lsp/") t))
     (setq lsp-server-install-dir           (var "lsp/server/"))
     (setq lsp-session-file                 (var "lsp/session.el"))
     (setq lsp-java-workspace-dir           (var "lsp-java/workspace/"))
