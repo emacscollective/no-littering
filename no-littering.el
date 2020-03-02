@@ -321,12 +321,12 @@ directories."
       `(make-directory ,(var "jabber/history/") t))
     (setq keyfreq-file                     (var "keyfreq.el"))
     (setq keyfreq-file-lock                (var "keyfreq.lock"))
-    (eval-after-load 'lookup
-      `(make-directory ,(etc "lookup/") t))
     (setq libbcel-oauth-store-filename     (var "libbcel-oauth-store.el.gpg"))
     (setq litable-list-file                (var "litable-list.el"))
     (setq logview-cache-filename           (var "logview-cache"))
     (setq logview-views-file               (etc "logview-views"))
+    (eval-after-load 'lookup
+      `(make-directory ,(etc "lookup/") t))
     (setq lookup-init-directory            (etc "lookup/"))
     (setq lsp-python-ms-dir                (var "lsp-python-ms/"))
     (setq lsp-server-install-dir           (var "lsp/server/"))
