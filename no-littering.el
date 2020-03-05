@@ -214,6 +214,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq diary-file                       (var "diary"))
     (setq epkg-repository                  (var "epkgs/"))
     (setq eshell-directory-name            (var "eshell/"))
+    (setq eudc-options-file                (etc "eudc-options.el"))
     (eval-after-load 'eww
       `(make-directory ,(var "eww/") t))
     (setq eww-bookmarks-directory          (var "eww/"))
