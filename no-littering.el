@@ -388,6 +388,7 @@ directories."
     (setq treemacs-last-error-persist-file (var "treemacs/persist-last-error.org"))
     (setq type-break-file-name             (var "type-break.el"))
     (setq undo-fu-session-directory        (var "undo-fu-session/"))
+    (setq undohist-directory               (var "undohist/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq user-emacs-ensime-directory      (var "ensime/"))
     (setq vimish-fold-dir                  (var "vimish-fold/"))
