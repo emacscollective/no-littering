@@ -218,6 +218,7 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'eww
       `(make-directory ,(var "eww/") t))
     (setq eww-bookmarks-directory          (var "eww/"))
+    (setq filesets-menu-cache-file         (var "filesets-menu-cache.el"))
     (setq gamegrid-user-score-file-directory (var "gamegrid-user-score/"))
     (setq ido-save-directory-list-file     (var "ido-save-directory-list.el"))
     (setq image-dired-db-file              (var "image-dired/db.el"))
