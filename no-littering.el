@@ -261,6 +261,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq anaconda-mode-installation-directory (var "anaconda-mode/"))
     (setq annotate-file                    (var "annotations.el"))
     (setq async-byte-compile-log-file      (var "async-bytecomp.log"))
+    (setq auto-package-update-last-update-day-path (var "auto-package-update-last-update-day"))
     (eval-after-load 'bbdb
       `(make-directory ,(var "bbdb/") t))
     (setq bbdb-file                        (var "bbdb/bbdb.el"))
