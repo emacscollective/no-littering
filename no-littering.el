@@ -198,6 +198,8 @@ This variable has to be set before `no-littering' is loaded.")
            (symbol-function #'no-littering-expand-etc-file-name))
           ((symbol-function 'var)
            (symbol-function #'no-littering-expand-var-file-name)))
+  (make-directory no-littering-etc-directory t)
+  (make-directory no-littering-var-directory t)
   (with-no-warnings ; many of these variables haven't been defined yet
 
 ;;; Built-in packages
