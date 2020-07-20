@@ -209,6 +209,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq auto-save-list-file-prefix       (var "auto-save/sessions/"))
     (setq backup-directory-alist           (list (cons "." (var "backup/"))))
     (setq bookmark-default-file            (var "bookmark-default.el"))
+    (setq calc-settings-file               (etc "calc-settings.el"))
     (eval-after-load 'desktop
       `(make-directory ,(var "desktop/") t))
     (setq desktop-dirname                  (var "desktop/"))
