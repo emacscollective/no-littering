@@ -368,6 +368,7 @@ directories."
     (setq org-recent-headings-save-file    (var "org/recent-headings.el"))
     (setq pandoc-data-dir                  (etc "pandoc-mode/"))
     (setq pcache-directory                 (var "pcache/"))
+    (setq persist--directory-location      (var "persist/"))
     (setq persistent-scratch-save-file     (var "persistent-scratch.el"))
     (setq persp-save-dir                   (var "persp-mode/"))
     (eval-after-load 'projectile
