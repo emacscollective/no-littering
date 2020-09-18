@@ -383,6 +383,7 @@ directories."
     (setq purpose-layout-dirs              (list (etc "window-purpose/layouts/")))
     (setq pyim-dcache-directory            (var "pyim/dcache/"))
     (setq quack-dir                        (var "quack/"))
+    (setq rfc-mode-directory               (var "rfc-mode/"))
     (setq request-storage-directory        (var "request/storage/"))
     (setq rmh-elfeed-org-files             (list (var "elfeed/rmh-elfeed.org")))
     (setq runner-init-file                 (var "runner-init.el"))
