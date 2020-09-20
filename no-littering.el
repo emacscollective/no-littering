@@ -217,6 +217,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq diary-file                       (var "diary"))
     (setq ede-project-placeholder-cache-file (var "ede-projects.el"))
     (setq epkg-repository                  (var "epkgs/"))
+    (setq erc-log-channels-directory       (var "erc/log-channels/"))
     (setq eshell-directory-name            (var "eshell/"))
     (setq eudc-options-file                (etc "eudc-options.el"))
     (eval-after-load 'eww
