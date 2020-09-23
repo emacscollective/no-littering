@@ -221,6 +221,9 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "erc/dcc/") t))
     (setq erc-dcc-get-default-directory    (var "erc/dcc/"))
     (setq erc-log-channels-directory       (var "erc/log-channels/"))
+    (eval-after-load 'eshell
+      `(make-directory ,(etc "eshell/") t))
+    (setq eshell-aliases-file              (etc "eshell/aliases"))
     (setq eshell-directory-name            (var "eshell/"))
     (setq eudc-options-file                (etc "eudc-options.el"))
     (eval-after-load 'eww
