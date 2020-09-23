@@ -204,7 +204,7 @@ This variable has to be set before `no-littering' is loaded.")
 
 ;;; Built-in packages
 
-    (setq abbrev-file-name                 (var "abbrev.el"))
+    (setq abbrev-file-name                 (etc "abbrev.el"))
     (setq auto-insert-directory            (etc "auto-insert/"))
     (setq auto-save-list-file-prefix       (var "auto-save/sessions/"))
     (setq backup-directory-alist           (list (cons "." (var "backup/"))))
