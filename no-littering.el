@@ -215,6 +215,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq desktop-dirname                  (var "desktop/"))
     (setq desktop-path                     (list desktop-dirname))
     (setq diary-file                       (var "diary"))
+    (setq ecomplete-database-file          (var "ecomplete-database.el"))
     (setq ede-project-placeholder-cache-file (var "ede-projects.el"))
     (setq epkg-repository                  (var "epkgs/"))
     (eval-after-load 'erc
