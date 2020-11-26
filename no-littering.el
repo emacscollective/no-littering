@@ -287,6 +287,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq bm-repository-file               (var "bm-repository.el"))
     (eval-after-load 'bookmark+-1
       `(make-directory ,(var "bmkp/") t))
+    (setq bmkp-bmenu-commands-file         (var "bmkp/bmenu-commands.el"))
     (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmark.el"))
     (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmark.el"))
     (setq bookiez-file                     (var "bookiez"))
