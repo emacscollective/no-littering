@@ -308,6 +308,7 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "elfeed/") t))
     (setq elfeed-db-directory              (var "elfeed/db/"))
     (setq elfeed-enclosure-default-dir     (var "elfeed/enclosures/"))
+    (setq elfeed-score-score-file          (etc "elfeed/score/score.el"))
     (setq elpher-bookmarks-file            (var "elpher-bookmarks.el"))
     (eval-after-load 'x-win
       (let ((session-dir (var "emacs-session/")))
