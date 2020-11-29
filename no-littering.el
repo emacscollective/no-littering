@@ -338,6 +338,12 @@ directories."
     (setq helm-github-stars-cache-file     (var "helm/github-stars-cache.el"))
     (setq helm-net-curl-log-file           (var "helm/helm-curl.log"))
     (setq historian-save-file              (var "historian-save.el"))
+    ;; hyperbole starts
+    (setq hbmap:dir-user                   (var "hyperbole/"))
+    (setq hbmap:dir-filename               (var "hyperbole/hbmap.el"))
+    (setq gbut:file                        (var "hyperbole/gbut-file"))
+    (setq hibtypes-git-repos-cache         (var "hyperbole/local-git-repos.el"))
+    ;; hyperbole ends
     (setq indium-workspace-file            (var "indium/workspaces.el"))
     (setq irfc-directory                   (var "irfc/"))
     (setq irony-user-dir                   (var "irony/"))
