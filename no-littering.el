@@ -382,6 +382,7 @@ directories."
     (setq org-registry-file                (var "org/registry.el"))
     (setq pandoc-data-dir                  (etc "pandoc-mode/"))
     (setq pcache-directory                 (var "pcache/"))
+    (setq pdf-view-restore-filename        (var "pdf-view-restore.el"))
     (setq persist--directory-location      (var "persist/"))
     (setq persistent-scratch-save-file     (var "persistent-scratch.el"))
     (setq persp-save-dir                   (var "persp-mode/"))
