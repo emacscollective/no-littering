@@ -219,7 +219,6 @@ This variable has to be set before `no-littering' is loaded.")
     (setq diary-file                       (var "diary"))
     (setq ecomplete-database-file          (var "ecomplete-database.el"))
     (setq ede-project-placeholder-cache-file (var "ede-projects.el"))
-    (setq epkg-repository                  (var "epkgs/"))
     (eval-after-load 'erc
       `(make-directory ,(var "erc/dcc/") t))
     (setq erc-dcc-get-default-directory    (var "erc/dcc/"))
@@ -245,15 +244,12 @@ This variable has to be set before `no-littering' is loaded.")
       `(make-directory ,(var "newsticker/") t))
     (setq newsticker-cache-filename        (var "newsticker/cache.el"))
     (setq newsticker-dir                   (var "newsticker/data/"))
-    (setq nix-buffer-directory-name        (var "nix-buffer/"))
     (setq nsm-settings-file                (var "nsm-settings.el"))
     (eval-after-load 'org
       `(make-directory ,(var "org/") t))
-    (setq omnisharp-cache-directory        (var "omnisharp/cache"))
     (setq org-clock-persist-file           (var "org/clock-persist.el"))
     (setq org-id-locations-file            (var "org/id-locations.el"))
     (setq org-publish-timestamp-directory  (var "org/timestamps/"))
-    (setq org-registry-file                (var "org/registry.el"))
     (setq project-list-file                (var "project-list.el"))
     (setq quickurl-url-file                (var "quickurl-url.el"))
     (setq rcirc-log-directory              (var "rcirc-log/"))
@@ -323,6 +319,7 @@ directories."
     (eval-after-load 'emojify
       `(make-directory ,(var "emojify/") t))
     (setq emojify-emojis-dir               (var "emojify/"))
+    (setq epkg-repository                  (var "epkgs/"))
     (setq equake-persistent-display-file   (var "equake-persistent-display"))
     (setq forge-database-file              (var "forge/database.sqlite"))
     (setq forge-post-directory             (var "forge/posts/"))
@@ -368,11 +365,13 @@ directories."
     (setq mc/list-file                     (var "mc-list.el"))
     (setq meghanada-server-install-dir     (var "meghanada/"))
     (setq multi-compile-history-file       (var "multi-compile-history.el"))
+    (setq nix-buffer-directory-name        (var "nix-buffer/"))
     ;; The value of this variable MUST NOT end with ".el" but the
     ;; actual file name MUST end with ".el".  Use "git blame" for
     ;; more information.
     (setq notmuch-init-file                (etc "notmuch-init"))
     (setq nov-save-place-file              (var "nov-save-place.el"))
+    (setq omnisharp-cache-directory        (var "omnisharp/cache"))
     (setq org-gcal-dir                     (var "org/gcal/"))
     (eval-after-load 'org-caldav
       `(make-directory ,(var "org/caldav/save") t))
@@ -380,6 +379,7 @@ directories."
     (setq org-caldav-save-directory        (var "org/caldav/save"))
     (setq org-journal-cache-file           (var "org/journal-cache.el"))
     (setq org-recent-headings-save-file    (var "org/recent-headings.el"))
+    (setq org-registry-file                (var "org/registry.el"))
     (setq pandoc-data-dir                  (etc "pandoc-mode/"))
     (setq pcache-directory                 (var "pcache/"))
     (setq persist--directory-location      (var "persist/"))
