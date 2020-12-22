@@ -380,6 +380,7 @@ directories."
     (setq org-journal-cache-file           (var "org/journal-cache.el"))
     (setq org-recent-headings-save-file    (var "org/recent-headings.el"))
     (setq org-registry-file                (var "org/registry.el"))
+    (setq package-quickstart-file          (var "package-quickstart.el")
     (setq pandoc-data-dir                  (etc "pandoc-mode/"))
     (setq pcache-directory                 (var "pcache/"))
     (setq pdf-view-restore-filename        (var "pdf-view-restore.el"))
