@@ -288,6 +288,9 @@ This variable has to be set before `no-littering' is loaded.")
     (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmark.el"))
     (setq bookiez-file                     (var "bookiez"))
     (setq cider-repl-history-file          (var "cider-repl-history.el"))
+    (eval-after-load 'command-log-mode
+      `(make-directory ,(var "command-log-mode-logging/") t))
+    (setq clm/logging-dir                  (var "command-log-mode/logging/"))
     (eval-after-load 'company
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
