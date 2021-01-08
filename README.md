@@ -12,8 +12,10 @@ insight into what package might have created them.
 
 This package sets out to fix this by changing the values of path
 variables to put configuration files in `no-littering-etc-directory`
-(defaulting to `~/.emacs.d/etc/`) and persistent data files in
-`no-littering-var-directory` (defaulting to `~/.emacs.d/var/`), and
+(defaulting to "etc/" under `user-emacs-directory`, thus usually
+"~/.emacs.d/etc/") and persistent data files in
+`no-littering-var-directory` (defaulting to "var/" under
+`user-emacs-directory`, thus usually "~/.emacs.d/var/"), and
 by using descriptive file names and subdirectories when appropriate.
 This is similar to a color-theme; a "path-theme" if you will.
 
