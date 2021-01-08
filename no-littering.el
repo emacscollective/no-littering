@@ -1,6 +1,6 @@
 ;;; no-littering.el --- help keeping ~/.emacs.d clean  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2016-2020  Jonas Bernoulli
+;; Copyright (C) 2016-2021  Jonas Bernoulli
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
@@ -287,9 +287,9 @@ This variable has to be set before `no-littering' is loaded.")
     (setq bmkp-current-bookmark-file       (var "bmkp/current-bookmark.el"))
     (setq bmkp-last-bookmark-file          (var "bmkp/last-bookmark.el"))
     (setq bookiez-file                     (var "bookiez"))
+    (setq cider-repl-history-file          (var "cider-repl-history.el"))
     (eval-after-load 'company
       `(make-directory ,(var "company/") t))
-    (setq cider-repl-history-file          (var "cider-repl-history.el"))
     (setq company-statistics-file          (var "company/statistics.el"))
     (setq company-tabnine-binaries-folder  (var "company/tabnine-binaries"))
     (setq dap-breakpoints-file             (var "dap/breakpoints.el"))
