@@ -385,6 +385,7 @@ directories."
     (setq org-journal-cache-file           (var "org/journal-cache.el"))
     (setq org-recent-headings-save-file    (var "org/recent-headings.el"))
     (setq org-registry-file                (var "org/registry.el"))
+    (setq org-roam-db-location             (var "org/org-roam.db"))
     (setq package-quickstart-file          (var "package-quickstart.el"))
     (setq pandoc-data-dir                  (etc "pandoc-mode/"))
     (setq pcache-directory                 (var "pcache/"))
