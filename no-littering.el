@@ -269,6 +269,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq type-break-file-name             (var "type-break.el"))
     (setq url-cache-directory              (var "url/cache/"))
     (setq url-configuration-directory      (var "url/configuration/"))
+    (setq url-cookie-file                  (var "url/configuration/cookies.el"))
 
 ;;; Third-party packages
 
