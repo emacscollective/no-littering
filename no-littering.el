@@ -270,6 +270,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq url-cache-directory              (var "url/cache/"))
     (setq url-configuration-directory      (var "url/configuration/"))
     (setq url-cookie-file                  (var "url/configuration/cookies.el"))
+    (setq url-history-file                 (var "url/configuration/history.el"))
 
 ;;; Third-party packages
 
