@@ -268,7 +268,9 @@ This variable has to be set before `no-littering' is loaded.")
     (setq tramp-persistency-file-name      (var "tramp/persistency.el"))
     (setq type-break-file-name             (var "type-break.el"))
     (setq url-cache-directory              (var "url/cache/"))
-    (setq url-configuration-directory      (var "url/configuration/"))
+    (setq url-configuration-directory      (var "url/"))
+    (setq url-cookie-file                  (var "url/cookies.el"))
+    (setq url-history-file                 (var "url/history.el"))
 
 ;;; Third-party packages
 
