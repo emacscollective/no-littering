@@ -1,6 +1,6 @@
 ;;; no-littering.el --- help keeping ~/.emacs.d clean  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2016-2021  Jonas Bernoulli
+;; Copyright (C) 2016-2022  Jonas Bernoulli
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
