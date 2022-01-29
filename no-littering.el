@@ -424,6 +424,7 @@ directories."
     (setq quack-dir                        (var "quack/"))
     (setq rfc-mode-directory               (var "rfc-mode/"))
     (setq request-storage-directory        (var "request/storage/"))
+    (setq rime-user-data-dir               (var "rime/"))
     (setq rmh-elfeed-org-files             (list (var "elfeed/rmh-elfeed.org")))
     (setq runner-init-file                 (var "runner-init.el"))
     (setq save-kill-file-name              (var "save-kill.el"))
