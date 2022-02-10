@@ -80,6 +80,16 @@ or even in the `etc/` directory:
 	;; or
     (setq custom-file (no-littering-expand-etc-file-name "custom.el"))
 
+#### Native compilation cache
+
+The location of the native compilation cache has to be changed using a
+function, preferably in `early-init.el`:
+
+     (when (fboundp 'startup-redirect-eln-cache)
+       (startup-redirect-eln-cache
+        (convert-standard-filename
+	     (expand-file-name  "var/eln-cache/" user-emacs-directory))))
+
 Conventions
 -----------
 
