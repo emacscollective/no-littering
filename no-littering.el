@@ -71,6 +71,8 @@
 ;;         (expand-file-name "data/" user-emacs-directory))
 ;;   (require 'no-littering)
 
+;; For additional optional settings see "README.md".
+
 ;;;; Conventions
 ;;;;; A) File names
 ;;
