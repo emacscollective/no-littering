@@ -377,6 +377,7 @@ directories."
     (eval-after-load 'lookup
       `(make-directory ,(etc "lookup/") t))
     (setq lookup-init-directory            (etc "lookup/"))
+    (setq lsp-clojure-workspace-dir        (var "lsp-clojure/workspace/"))
     (setq lsp-eslint-library-choices-file  (var "lsp/eslint-library-choices.el"))
     (setq lsp-python-ms-dir                (var "lsp-python-ms/"))
     (eval-after-load 'lsp-mode
