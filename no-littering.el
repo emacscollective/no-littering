@@ -4,7 +4,7 @@
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/no-littering
-;; Package-Requires: ((cl-lib "0.5"))
+;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -176,6 +176,7 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'compat)
 
 (defvar no-littering-etc-directory
   (expand-file-name (convert-standard-filename "etc/") user-emacs-directory)
