@@ -349,6 +349,7 @@ directories."
     (setq emojify-emojis-dir               (var "emojify/"))
     (setq epkg-repository                  (var "epkgs/"))
     (setq equake-persistent-display-file   (var "equake-persistent-display"))
+    (setq fontaine-latest-state-file       (var "fontaine-latest-state.eld"))
     (setq forge-database-file              (var "forge/database.sqlite"))
     (setq forge-post-directory             (var "forge/posts/"))
     (setq geben-temporary-file-directory   (var "geben/"))
