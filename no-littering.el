@@ -296,6 +296,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq auto-package-update-last-update-day-path (var "auto-package-update-last-update-day"))
     (eval-after-load 'bbdb
       `(make-directory ,(var "bbdb/") t))
+    (setq abm-file                         (var "autobookmarks.el"))
     (setq bbdb-file                        (var "bbdb/bbdb.el"))
     (setq bbdb-vcard-directory             (var "bbdb/vcard/"))
     (setq bm-repository-file               (var "bm-repository.el"))
