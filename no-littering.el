@@ -398,6 +398,7 @@ directories."
     (setq meghanada-server-install-dir     (var "meghanada/"))
     (setq multi-compile-history-file       (var "multi-compile-history.el"))
     (setq nix-buffer-directory-name        (var "nix-buffer/"))
+    (setq nomad-tramp-script-directory     (var "nomad-tramp/"))
     ;; The value of this variable MUST NOT end with ".el" but the
     ;; actual file name MUST end with ".el".  Use "git blame" for
     ;; more information.
