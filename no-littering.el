@@ -431,6 +431,7 @@ directories."
     (setq purpose-layout-dirs              (list (etc "window-purpose/layouts/")))
     (setq pyim-dcache-directory            (var "pyim/dcache/"))
     (setq quack-dir                        (var "quack/"))
+    (setq racket-repl-history-directory    (var "racket-mode/repl-history/"))
     (setq rfc-mode-directory               (var "rfc-mode/"))
     (setq request-storage-directory        (var "request/storage/"))
     (setq rime-user-data-dir               (var "rime/"))
