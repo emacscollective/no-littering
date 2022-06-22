@@ -90,8 +90,8 @@ or even in the ~etc/~ directory:
 
 **** Native compilation cache
 
-The location of the native compilation cache has to be changed using a
-function, preferably in ~early-init.el~:
+When using Emacs 29, the location of the native compilation cache can
+be changed using a function, preferably in ~early-init.el~:
 
 #+begin_src emacs-lisp
   (when (fboundp 'startup-redirect-eln-cache)
