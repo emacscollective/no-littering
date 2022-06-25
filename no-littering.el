@@ -441,6 +441,7 @@ directories."
     (setq save-visited-files-location      (var "save-visited-files-location"))
     (eval-after-load 'sly
       `(make-directory ,(var "sly/") t))
+    (setq session-save-file                (var "session.el"))
     (setq sly-mrepl-history-file-name      (var "sly/mrepl-history"))
     (setq smex-save-file                   (var "smex-save.el"))
     (setq speed-type-gb-dir                (var "speed-type/"))
