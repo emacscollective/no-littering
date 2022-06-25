@@ -457,6 +457,7 @@ directories."
     (setq undo-fu-session-directory        (var "undo-fu-session/"))
     (setq undohist-directory               (var "undohist/"))
     (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
+    (setq uptimes-database                 (var "uptimes.el"))
     (setq user-emacs-ensime-directory      (var "ensime/"))
     (setq vimish-fold-dir                  (var "vimish-fold/"))
     (eval-after-load 'wl
