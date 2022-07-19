@@ -445,6 +445,7 @@ directories."
     (setq sly-mrepl-history-file-name      (var "sly/mrepl-history"))
     (setq smex-save-file                   (var "smex-save.el"))
     (setq speed-type-gb-dir                (var "speed-type/"))
+    (setq spell-fu-directory               (var "spell-fu/"))
     (setq svg-lib-icons-dir                (var "svg-lib/icons/"))
     (eval-after-load 'sx
       `(make-directory ,(var "sx/cache/") t))
