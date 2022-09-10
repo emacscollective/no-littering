@@ -232,6 +232,8 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'eshell
       `(make-directory ,(etc "eshell/") t))
     (setq eshell-aliases-file              (etc "eshell/aliases"))
+    (setq eshell-rc-script                 (etc "eshell/rc"))
+    (setq eshell-login-script              (etc "eshell/login"))
     (setq eshell-directory-name            (var "eshell/"))
     (setq eudc-options-file                (etc "eudc-options.el"))
     (eval-after-load 'eww
