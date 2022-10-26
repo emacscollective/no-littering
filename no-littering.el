@@ -243,8 +243,12 @@ This variable has to be set before `no-littering' is loaded.")
     (setq gamegrid-user-score-file-directory (var "gamegrid-user-score/"))
     (eval-after-load 'gnus
       `(make-directory ,(var "gnus/dribble/") t))
+    (eval-after-load 'gnus
+      `(make-directory ,(etc "gnus/") t))
     (setq gnus-dribble-directory           (var "gnus/dribble/"))
     (setq gnus-init-file                   (etc "gnus/init.el"))
+    ;;; Gnus hardcodes newsrc.eld to be based on gnus-startup-file' :/
+    (setq gnus-startup-file                (etc "gnus/newsrc"))
     (setq ido-save-directory-list-file     (var "ido-save-directory-list.el"))
     (setq image-dired-db-file              (var "image-dired/db.el"))
     (setq image-dired-dir                  (var "image-dired/"))
