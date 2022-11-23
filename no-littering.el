@@ -490,6 +490,7 @@ directories."
     (eval-after-load 'yasnippet
       `(make-directory ,(etc "yasnippet/snippets/") t))
     (setq yas-snippet-dirs                 (list (etc "yasnippet/snippets/")))
+    (setq elgrep-data-file                 (var "elgrep-data.el"))
     ))
 
 ;;; _
