@@ -343,6 +343,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq elfeed-enclosure-default-dir     (var "elfeed/enclosures/"))
     (setq elfeed-score-score-file          (etc "elfeed/score/score.el"))
     (setq elfeed-autotag-files             (list (etc "elfeed/autotags.org")))
+    (setq elgrep-data-file                 (var "elgrep-data.el"))
     (setq elpher-bookmarks-file            (var "elpher-bookmarks.el"))
     (eval-after-load 'x-win
       (let ((session-dir (var "emacs-session/")))
