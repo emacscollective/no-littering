@@ -207,3 +207,8 @@ be changed using a function, preferably in ~early-init.el~:
 # Local Variables:
 # fill-column: 70
 # End:
+
+#+html: <br><br>
+#+html: <a href="https://github.com/emacscollective/no-littering/actions/workflows/compile.yml"><img alt="Compile" src="https://github.com/emacscollective/no-littering/actions/workflows/compile.yml/badge.svg"/></a>
+#+html: <a href="https://stable.melpa.org/#/no-littering"><img alt="MELPA Stable" src="https://stable.melpa.org/packages/no-littering-badge.svg"/></a>
+#+html: <a href="https://melpa.org/#/no-littering"><img alt="MELPA" src="https://melpa.org/packages/no-littering-badge.svg"/></a>
