@@ -369,6 +369,7 @@ directories."
     (setq geiser-repl-history-filename     (var "geiser/repl-history"))
     (setq gnus-notes-top-dir               (var "gnus-notes/"))
     (setq gnus-notes-file                  (var "gnus-notes/articles.el"))
+    (setq grammalecte-settings-file        (etc "flycheck/grammalecte-settings.el")
     (setq hackernews-visited-links-file    (var "hackernews/visited-links.el"))
     (setq harpoon-cache-file               (var "harpoon/"))
     (eval-after-load 'helm
