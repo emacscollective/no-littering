@@ -68,12 +68,12 @@ The form looks like this:
     "abbrev-file-name" ; name of the variable
     (make-directory
      ;; create a parent dir for target
-     "/home/matus/.emacs.d/etc/" t)
+     "/home/matus/.config/emacs/etc/" t)
     (rename-file
      ;; old (current) file
-     "/home/matus/.emacs.d/abbrev_defs"
+     "/home/matus/.config/emacs/abbrev_defs"
      ;; new file
-     "/home/matus/.emacs.d/etc/abbrev.el"
+     "/home/matus/.config/emacs/etc/abbrev.el"
      1))
 #+end_src
 

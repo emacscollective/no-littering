@@ -1,4 +1,4 @@
-;;; no-littering.el --- Help keeping ~/.emacs.d clean  -*- lexical-binding:t -*-
+;;; no-littering.el --- Help keeping ~/.config/emacs clean  -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2016-2023 Jonas Bernoulli
 
@@ -25,7 +25,7 @@
 
 ;;; Commentary:
 
-;; Help keeping ~/.emacs.d clean.
+;; Help keeping ~/.config/emacs clean.
 
 ;; The default paths used to store configuration files and persistent
 ;; data are not consistent across Emacs packages.  This isn't just a
@@ -39,7 +39,7 @@
 ;; This package sets out to fix this by changing the values of path
 ;; variables to put configuration files in `no-littering-etc-directory'
 ;; (defaulting to "etc/" under `user-emacs-directory', thus usually
-;; "~/.emacs.d/etc/") and persistent data files in
+;; "~/.config/emacs/etc/") and persistent data files in
 ;; `no-littering-var-directory' (defaulting to "var/" under
 ;; `user-emacs-directory', thus usually "~/.emacs.d/var/"), and
 ;; by using descriptive file names and subdirectories when appropriate.
