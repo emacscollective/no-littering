@@ -58,8 +58,10 @@ the following.
 
 #+begin_src emacs-lisp
   (require 'recentf)
-  (add-to-list 'recentf-exclude no-littering-var-directory)
-  (add-to-list 'recentf-exclude no-littering-etc-directory)
+  (add-to-list 'recentf-exclude
+	       (recentf-expand-file-name no-littering-var-directory))
+  (add-to-list 'recentf-exclude
+	       (recentf-expand-file-name no-littering-etc-directory))
 #+end_src
 
 **** Auto-save settings
