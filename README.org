@@ -44,9 +44,9 @@ variables before loading the feature.
 
 #+begin_src emacs-lisp
   (setq no-littering-etc-directory
-	(expand-file-name "config/" user-emacs-directory))
+        (expand-file-name "config/" user-emacs-directory))
   (setq no-littering-var-directory
-	(expand-file-name "data/" user-emacs-directory))
+        (expand-file-name "data/" user-emacs-directory))
   (require 'no-littering)
 #+end_src
 
@@ -59,9 +59,9 @@ the following.
 #+begin_src emacs-lisp
   (require 'recentf)
   (add-to-list 'recentf-exclude
-	       (recentf-expand-file-name no-littering-var-directory))
+               (recentf-expand-file-name no-littering-var-directory))
   (add-to-list 'recentf-exclude
-	       (recentf-expand-file-name no-littering-etc-directory))
+               (recentf-expand-file-name no-littering-etc-directory))
 #+end_src
 
 **** Auto-save settings
@@ -74,7 +74,7 @@ the following code to your ~init.el~ file to store these files in the
 
 #+begin_src emacs-lisp
   (setq auto-save-file-name-transforms
-	`((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+        `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 #+end_src
 
 **** Saved customizations
@@ -99,7 +99,7 @@ be changed using a function, preferably in ~early-init.el~:
   (when (fboundp 'startup-redirect-eln-cache)
     (startup-redirect-eln-cache
      (convert-standard-filename
-	  (expand-file-name  "var/eln-cache/" user-emacs-directory))))
+          (expand-file-name  "var/eln-cache/" user-emacs-directory))))
 #+end_src
 
 ** Conventions
