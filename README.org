@@ -97,7 +97,7 @@ directory, you can use this:
         `(("\\`/[^/]*:\\([^/]*/\\)*\\([^/]*\\)\\'"
            ,(concat temporary-file-directory "\\2") t)
           ("\\`\\(/tmp\\|/dev/shm\\)\\([^/]*/\\)*\\(.*\\)\\'" "\\3")
-          ("." ,(no-littering-expand-var-file-name "auto-save/") t)))
+          (".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 #+end_src
 
 The first element preserves the default behavior for remote files.
