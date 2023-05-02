@@ -51,6 +51,24 @@ variables before loading the feature.
 #+end_src
 
 *** Suggested Settings
+**** Auto-save, backup and undo-tree files
+
+Creating backups increases the odds that secret information, which
+would otherwise never be stored in clear text, is written to disk.
+Likewise backups increase the odds that leaked secrets persist longer.
+
+This topic is beyond the scope of this documentation, but as the
+author of this package, I want to at least ensure that its use does
+not make matters worse.
+
+For that reason, simply loading ~no-littering~, does not theme the
+built-in backup and auto-save functionality, and the third-party
+~undo-tree~ package.
+
+A function ~no-littering-theme-backups~ is provided, which does theme
+these features.  Before calling that function from your init files,
+you should read its docstring and implementation.
+
 **** Recent files
 
 If you use ~recentf~ then you might find it convenient to exclude all
@@ -64,47 +82,6 @@ the following.
   (add-to-list 'recentf-exclude
                (recentf-expand-file-name no-littering-etc-directory))
 #+end_src
-
-**** Backup files
-
-By default backup files are created in the same directory as the
-visited file.  To avoid littering these backups all over the place,
-you may wish to collect /most/ of them in a single directory:
-
-#+begin_src emacs-lisp
-  (setq backup-directory-alist
-        `(("\\`/tmp/" . nil)
-          ("\\`/dev/shm/" . nil)
-          ("." . ,(no-littering-expand-var-file-name "backup/"))))
-#+end_src
-
-With this value, most files are backed up in the ~var~ directory, but
-for files in ~/tmp~ and ~/dev/shm~, the backups are created in the same
-directory as the visited file.  This helps reduce the risk of leaking
-secrets; in case an command-line tools has the user edit a secret by
-opening a clear-text file using ~emacs~ / ~emacsclient~.  For more
-information about this risk, see [[https://www.reddit.com/r/emacs/comments/12tj72z][this explanation]].
-
-**** Auto-save files
-
-By default auto-save files are created in the same directory as the
-visited file, except for remote files, which are created in ~/tmp~ on
-the local machine.  To collect /most/ auto-save files in a single
-directory, you can use this:
-
-#+begin_src emacs-lisp
-  (setq auto-save-file-name-transforms
-        `(("\\`/[^/]*:\\([^/]*/\\)*\\([^/]*\\)\\'"
-           ,(concat temporary-file-directory "\\2") t)
-          ("\\`\\(/tmp\\|/dev/shm\\)\\([^/]*/\\)*\\(.*\\)\\'" "\\3")
-          (".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
-#+end_src
-
-The first element preserves the default behavior for remote files.
-The second element tries to keep auto-save files for visited files,
-which exist in in-memory file-systems, on the same file-system.  The
-third element places all other auto-save files in the ~var~ directory.
-Also see the previous section about the risk of leaking secrets.
 
 **** Saved customizations
 

@@ -463,7 +463,6 @@ This variable has to be set before `no-littering' is loaded.")
     (setq treemacs-last-error-persist-file (var "treemacs/persist-last-error.org"))
     (setq undo-fu-session-directory        (var "undo-fu-session/"))
     (setq undohist-directory               (var "undohist/"))
-    (setq undo-tree-history-directory-alist (list (cons "." (var "undo-tree-hist/"))))
     (setq uptimes-database                 (var "uptimes.el"))
     (setq user-emacs-ensime-directory      (var "ensime/"))
     (setq vimish-fold-dir                  (var "vimish-fold/"))
@@ -495,6 +494,71 @@ Unconditionally return a filename in `no-littering-var-directory'."
 
 (advice-add 'emacs-session-filename :override
             #'no-littering-emacs-session-filename)
+
+;;; Backups
+
+(defvar undo-tree-history-directory-alist)
+
+(defun no-littering-theme-backups ()
+  "Theme locations where backups of various sorts are created.
+
+The purpose of this package is to store data files of various
+sorts in a handful of central locations, instead of spreading
+them all over the place.  When doing that for temporary files,
+which contain backups of some sort, that increases the odds that
+sensitive data is written to disk in clear text and/or that such
+clear text files persist longer, if they would be created anyway.
+
+Because of that, simply loading `no-littering' does not theme
+certain, potentially unsafe variables.  Instead, this function is
+provided, so that you can decide whether to take the risk or not.
+
+Calling this function sets these variables:
+- `auto-save-file-name-transforms' (built-in)
+- `backup-directory-alist' (built-in)
+- `undo-tree-history-directory-alist' (from `undo-tree')
+
+The default values of these variables cause additional files to
+be created in the same directories as the files that are being
+visited.  Calling this function changes the values of these
+variables, so that this is only done for visited files located in
+certain directories.  For all other visited files, the additional
+files are created in files inside `no-littering-var-directory'.
+
+Additional files are created in the same directory as the visited
+file, for files located in:
+- \"/tmp/\"
+- \"/dev/shm\"
+- `temporary-file-directory'
+
+With these settings it is still possible that sensitive data is
+written to additional files, but you are more likely to spot it,
+and because these directories usually use a `tmpfs' file-system,
+the leaked secrets should not persist after a reboot.
+
+If you do *not* call this function, then these additional files
+are always created in the same directory as the visited files,
+regardless of the location of the visited files.  In other words,
+even when using the default values, there is a significant risk
+of leaking sensitive data, and if you want to reduce that, then
+you must turn of these features completely."
+  (setq auto-save-file-name-transforms
+        `(("\\`/[^/]*:\\([^/]*/\\)*\\([^/]*\\)\\'"
+           ,(concat (file-name-as-directory temporary-file-directory) "\\2") t)
+          ("\\`/tmp\\([^/]*/\\)*\\(.*\\)\\'" "\\2")
+          ("\\`/dev/shm\\([^/]*/\\)*\\(.*\\)\\'" "\\2")
+          (".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+  (setq backup-directory-alist
+        `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
+          ("\\`/tmp/" . nil)
+          ("\\`/dev/shm/" . nil)
+          ("." . ,(no-littering-expand-var-file-name "backup/"))))
+  (setq undo-tree-history-directory-alist
+        `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
+          ("\\`/tmp/" . nil)
+          ("\\`/dev/shm/" . nil)
+          ("." ,(no-littering-expand-var-file-name "undo-tree-hist/"))))
+  )
 
 ;;; _
 (provide 'no-littering)
