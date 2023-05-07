@@ -217,34 +217,34 @@ This variable has to be set before `no-littering' is loaded.")
     (setq auto-save-list-file-prefix       (var "auto-save/sessions/"))
     (setq bookmark-default-file            (var "bookmark-default.el"))
     (setq calc-settings-file               (etc "calc-settings.el"))
-    (eval-after-load 'desktop
-      `(make-directory ,(var "desktop/") t))
     (setq desktop-dirname                  (var "desktop/"))
+    (eval-after-load 'desktop
+      (make-directory desktop-dirname t))
     (setq desktop-path                     (list desktop-dirname))
     (setq diary-file                       (var "diary"))
     (setq ecomplete-database-file          (var "ecomplete-database.el"))
     (setq ede-project-placeholder-cache-file (var "ede-projects.el"))
     (eval-after-load 'erc
-      `(make-directory ,(var "erc/dcc/") t))
+      (make-directory ede-project-placeholder-cache-file t))
     (setq erc-dcc-get-default-directory    (var "erc/dcc/"))
     (setq erc-log-channels-directory       (var "erc/log-channels/"))
-    (eval-after-load 'eshell
-      `(make-directory ,(etc "eshell/") t))
     (setq eshell-aliases-file              (etc "eshell/aliases"))
+    (eval-after-load 'eshell
+      (make-directory eshell-aliases-file t))
     (setq eshell-rc-script                 (etc "eshell/rc"))
     (setq eshell-login-script              (etc "eshell/login"))
     (setq eshell-directory-name            (var "eshell/"))
     (setq eudc-options-file                (etc "eudc-options.el"))
-    (eval-after-load 'eww
-      `(make-directory ,(var "eww/") t))
     (setq eww-bookmarks-directory          (var "eww/"))
+    (eval-after-load 'eww
+      (make-directory eww-bookmarks-directory t))
     (setq filesets-menu-cache-file         (var "filesets-menu-cache.el"))
     (setq gamegrid-user-score-file-directory (var "gamegrid-user-score/"))
     (eval-after-load 'gnus
-      `(make-directory ,(var "gnus/dribble/") t))
-    (eval-after-load 'gnus
       `(make-directory ,(etc "gnus/") t))
     (setq gnus-dribble-directory           (var "gnus/dribble/"))
+    (eval-after-load 'gnus
+      (make-directory gnus-dribble-directory t))
     (setq gnus-init-file                   (etc "gnus/init.el"))
     ;;; Gnus hardcodes newsrc.eld to be based on gnus-startup-file' :/
     (setq gnus-startup-file                (etc "gnus/newsrc"))
@@ -315,9 +315,9 @@ This variable has to be set before `no-littering' is loaded.")
     (setq code-review-db-database-file     (var "code-review/database.sqlite"))
     (setq code-review-download-dir         (var "code-review/downloads/"))
     (setq code-review-log-file             (var "code-review/log"))
-    (eval-after-load 'command-log-mode
-      `(make-directory ,(var "command-log-mode-logging/") t))
     (setq clm/logging-dir                  (var "command-log-mode/logging/"))
+    (eval-after-load 'command-log-mode
+      (make-directory clm/logging-dir t))
     (eval-after-load 'company
       `(make-directory ,(var "company/") t))
     (setq company-statistics-file          (var "company/statistics.el"))
@@ -354,9 +354,9 @@ This function overrides the one on `x-win' to use `no-littering'
 directories."
              (expand-file-name session-id ,session-dir)))))
     (setq emms-directory                   (var "emms/"))
-    (eval-after-load 'emojify
-      `(make-directory ,(var "emojify/") t))
     (setq emojify-emojis-dir               (var "emojify/"))
+    (eval-after-load 'emojify
+      (make-directory emojify-emojis-dir t))
     (setq epkg-repository                  (var "epkgs/"))
     (setq equake-persistent-display-file   (var "equake-persistent-display"))
     (setq fontaine-latest-state-file       (var "fontaine-latest-state.eld"))
@@ -383,19 +383,19 @@ directories."
     (setq irony-user-dir                   (var "irony/"))
     (setq jabber-avatar-cache-directory    (var "jabber/avatar-cache"))
     (eval-after-load 'jabber
-      `(make-directory ,(var "jabber/avatar-cache/") t))
+      (make-directory jabber-avatar-cache-directory t))
     (setq jabber-history-dir               (var "jabber/history"))
     (eval-after-load 'jabber
-      `(make-directory ,(var "jabber/history/") t))
+      (make-directory jabber-history-dir t))
     (setq keyfreq-file                     (var "keyfreq.el"))
     (setq keyfreq-file-lock                (var "keyfreq.lock"))
     (setq libbcel-oauth-store-filename     (var "libbcel-oauth-store.el.gpg"))
     (setq litable-list-file                (var "litable-list.el"))
     (setq logview-cache-filename           (var "logview-cache"))
     (setq logview-views-file               (etc "logview-views"))
-    (eval-after-load 'lookup
-      `(make-directory ,(etc "lookup/") t))
     (setq lookup-init-directory            (etc "lookup/"))
+    (eval-after-load 'lookup
+      (make-directory lookup-init-directory t))
     (setq lsp-clojure-workspace-dir        (var "lsp-clojure/workspace/"))
     (setq lsp-ltex-user-rules-path         (var "lsp-ltex/"))
     (setq lsp-eslint-library-choices-file  (var "lsp/eslint-library-choices.el"))
@@ -420,10 +420,10 @@ directories."
     (setq nov-save-place-file              (var "nov-save-place.el"))
     (setq omnisharp-cache-directory        (var "omnisharp/cache"))
     (setq org-gcal-dir                     (var "org/gcal/"))
-    (eval-after-load 'org-caldav
-      `(make-directory ,(var "org/caldav/save") t))
     (setq org-caldav-backup-file           (var "org/caldav/backup.org"))
     (setq org-caldav-save-directory        (var "org/caldav/save"))
+    (eval-after-load 'org-caldav
+      (make-directory org-caldav-save-directory t))
     (setq org-journal-cache-file           (var "org/journal-cache.el"))
     (setq org-recent-headings-save-file    (var "org/recent-headings.el"))
     (setq org-registry-file                (var "org/registry.el"))
@@ -461,9 +461,9 @@ directories."
     (setq speed-type-gb-dir                (var "speed-type/"))
     (setq spell-fu-directory               (var "spell-fu/"))
     (setq svg-lib-icons-dir                (var "svg-lib/icons/"))
-    (eval-after-load 'sx
-      `(make-directory ,(var "sx/cache/") t))
     (setq sx-cache-directory               (var "sx/cache/"))
+    (eval-after-load 'sx
+      (make-directory sx-cache-directory t))
     (setq tldr-directory-path              (var "tldr/"))
     (setq transient-history-file           (var "transient/history.el"))
     (setq transient-levels-file            (etc "transient/levels.el"))
@@ -485,12 +485,12 @@ directories."
     (setq wl-x-face-file                   (etc "wanderlust/x-face"))
     (setq wl-temporary-file-directory      (var "wanderlust-tmp"))
     (setq x86-lookup-cache-directory       (var "x86-lookup/cache/"))
-    (eval-after-load 'xkcd
-      `(make-directory ,(var "xkcd/") t))
     (setq xkcd-cache-dir                   (var "xkcd/"))
-    (eval-after-load 'yasnippet
-      `(make-directory ,(etc "yasnippet/snippets/") t))
+    (eval-after-load 'xkcd
+      (make-directory xkcd-cache-dir t))
     (setq yas-snippet-dirs                 (list (etc "yasnippet/snippets/")))
+    (eval-after-load 'yasnippet
+      (make-directory (nth 0 yas-snippet-dirs) t))
     ))
 
 ;;; _
