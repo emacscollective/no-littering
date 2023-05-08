@@ -454,7 +454,7 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'sx          '(make-directory sx-cache-directory t))
     (eval-after-load 'wl          `(make-directory ,(etc "wanderlust") t))
     (eval-after-load 'xkcd        '(make-directory xkcd-cache-dir t))
-    (eval-after-load 'yasnippet   '(make-directory yas-snippet-dirs t))
+    (eval-after-load 'yasnippet   '(make-directory (car yas-snippet-dirs) t))
     ))
 
 ;;; Advices
