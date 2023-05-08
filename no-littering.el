@@ -344,15 +344,6 @@ This variable has to be set before `no-littering' is loaded.")
     (setq elfeed-autotag-files             (list (etc "elfeed/autotags.org")))
     (setq elgrep-data-file                 (var "elgrep-data.el"))
     (setq elpher-bookmarks-file            (var "elpher-bookmarks.el"))
-    (eval-after-load 'x-win
-      (let ((session-dir (var "emacs-session/")))
-        `(progn
-           (make-directory ,session-dir t)
-           (defun emacs-session-filename (session-id)
-             "Construct a filename to save the session in based on SESSION-ID.
-This function overrides the one on `x-win' to use `no-littering'
-directories."
-             (expand-file-name session-id ,session-dir)))))
     (setq emms-directory                   (var "emms/"))
     (eval-after-load 'emojify
       `(make-directory ,(var "emojify/") t))
@@ -492,6 +483,18 @@ directories."
       `(make-directory ,(etc "yasnippet/snippets/") t))
     (setq yas-snippet-dirs                 (list (etc "yasnippet/snippets/")))
     ))
+
+;;; Advices
+
+(defun no-littering-emacs-session-filename (session-id)
+  "Construct a filename to save the session in, based on SESSION-ID.
+Unconditionally return a filename in `no-littering-var-directory'."
+  (let ((dir (no-littering-expand-var-file-name "emacs-session/")))
+    (make-directory dir t)
+    (expand-file-name session-id dir)))
+
+(advice-add 'emacs-session-filename :override
+            #'no-littering-emacs-session-filename)
 
 ;;; _
 (provide 'no-littering)
