@@ -85,14 +85,13 @@ the following.
 
 **** Saved customizations
 
-Emacs will save [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html
-][customizations]] into your ~init.el~ file by default.
+Emacs will save [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Customizations.html][customizations]] into your ~init.el~ file by default.
 If you don't want that, you might want to store them in a sibling file
 or even in the ~etc/~ directory:
 
 #+begin_src emacs-lisp
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-      ;; or
+  ;; or
   (setq custom-file (no-littering-expand-etc-file-name "custom.el"))
 #+end_src
 
@@ -105,7 +104,7 @@ be changed using a function, preferably in ~early-init.el~:
   (when (fboundp 'startup-redirect-eln-cache)
     (startup-redirect-eln-cache
      (convert-standard-filename
-          (expand-file-name  "var/eln-cache/" user-emacs-directory))))
+      (expand-file-name  "var/eln-cache/" user-emacs-directory))))
 #+end_src
 
 ** Conventions
