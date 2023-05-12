@@ -531,7 +531,7 @@ you must turn of these features completely."
         `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
           ("\\`/tmp/" . nil)
           ("\\`/dev/shm/" . nil)
-          ("." ,(no-littering-expand-var-file-name "undo-tree-hist/"))))
+          ("." . ,(no-littering-expand-var-file-name "undo-tree-hist/"))))
   )
 
 ;;; _
