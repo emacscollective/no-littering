@@ -61,7 +61,7 @@ and press =C-c C-c=.
 
 The result is a list of =progn= forms which can be evaluated by placing
 the point at the end of the =progn= form and calling =M-x eval-last-sexp=
-(sometimes bound to ~C-x C-e~).
+(usually bound to ~C-x C-e~).
 
 The form looks like this:
 
@@ -84,10 +84,9 @@ If you are satisfied, execute it and move to the next one.
 Some of the forms might error out when the source file does not exist.
 In that case there's nothing to do and you can move to the next one.
 
-Occasionally, the code generate is not valid and you need to do the
-migration manually.  For now, the only value which wasn't readily
-supported is =backup-directory-alist= which is not a string but an
-alist.
+Occasionally, the generated code is not valid and you need to do the
+migration manually.  For now, the only value which isn't supported is
+=backup-directory-alist= which is not a string but an alist.
 
 ** Remove customized values
 
@@ -97,7 +96,7 @@ by =no-littering=.  Simply run the following to remove all
 customizations.
 
 *Make sure to backup your custom file before running this so you can
-compare he results.*
+compare the results.*
 
 #+begin_src elisp
   (no-littering-custom-reset)
