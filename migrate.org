@@ -49,8 +49,10 @@ Now we save the new themed values set by no-littering.
 ** Generate migrations
 
 We now have the old list and a new list and we can compare the
-existing values to new values.  The script below generates a migration
+existing values to new values.  The code below generates a migration
 script which you have to review and execute manually.
+In order to generate the script, place the cursor inside the code block
+and press =C-c C-c=.
 
 #+begin_src elisp :wrap src elisp :results value pp
   (no-littering-generate-migration no-littering-current-values
