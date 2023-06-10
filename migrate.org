@@ -52,7 +52,7 @@ We now have the old list and a new list and we can compare the
 existing values to new values.  The script below generates a migration
 script which you have to review and execute manually.
 
-#+begin_src elisp :wrap src elisp :results value
+#+begin_src elisp :wrap src elisp :results value pp
   (no-littering-generate-migration no-littering-current-values
 				   no-littering-new-values)
 #+end_src
