@@ -85,8 +85,7 @@ Some of the forms might error out when the source file does not exist.
 In that case there's nothing to do and you can move to the next one.
 
 Occasionally, the generated code is not valid and you need to do the
-migration manually.  For now, the only value which isn't supported is
-=backup-directory-alist= which is not a string but an alist.
+migration manually.
 
 ** Remove customized values
 
