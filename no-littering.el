@@ -51,9 +51,10 @@
 ;; coverage.  Pull requests are highly welcome (but please follow the
 ;; conventions described below and in the pull request template).
 
-;; `no-littering' cannot help with moving existing files to the new
-;; location.  You will have to move the files manually.  See issue
-;; #79 for more information.
+;; This package does not automatically migrate existing files to their
+;; new locations, but unless you want to, you also do not have to do
+;; it completely by hand.  The contributed "migrate.org" provides some
+;; guidance and tools to help with the migration.
 
 ;;;; Usage
 
