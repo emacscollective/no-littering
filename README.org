@@ -130,7 +130,12 @@ be changed using a function, preferably in ~early-init.el~:
    so that files are visited using the appropriate major-modes and
    also to provide a hint about the kind of data stored in the file.
    E.g.,  if a file contains an S-expression, then the suffix should
-   be ~*.el~.
+   be ~.eld~.
+
+   (In the past we used ~.el~ instead, because ~.eld~ did not exist yet.
+   Many themed files still use the ~.el~ suffix, and I do not plan to
+   update them to the preferred ~.eld~ suffix any time soon.  But for
+   newly themed files ~.eld~ should be preferred in most cases.)
 
 *** (B) File location and subdirectories
 
