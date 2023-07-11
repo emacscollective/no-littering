@@ -189,7 +189,7 @@ be changed using a function, preferably in ~early-init.el~:
 *** (D) Commit messages
 
 1. Please theme each package using a separate commit and use commit
-   messages of the form ~PACKAGE: theme VARIABLE~.
+   messages of the form ~<package>: Theme <variable>~.
 
 2. If a package has several path variables, then you should theme them
    all in one commit.
@@ -198,7 +198,7 @@ be changed using a function, preferably in ~early-init.el~:
    use a message such as:
 
    #+begin_src text
-     foo: theme variables
+     foo: Theme variables
 
      Theme `foo-config-file', `foo-cache-directory',
      and `foo-persistent-file'.

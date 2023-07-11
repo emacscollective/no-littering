@@ -151,7 +151,7 @@
 ;;;;; D) Commit messages
 ;;
 ;; 1. Please theme each package using a separate commit and use commit
-;;    messages of the form "<package>: theme <variable".
+;;    messages of the form "<package>: Theme <variable".
 ;;
 ;; 2. If a package has several path variables, then you should theme them
 ;;    all in one commit.
@@ -159,10 +159,11 @@
 ;; 3. If the variable names do not fit nicely on the summary line, then
 ;;    use a message such as:
 ;;
-;;      foo: theme variables
+;;      foo: Theme variables
 ;;
 ;;      Theme `foo-config-file', `foo-cache-directory',
 ;;      and `foo-persistent-file'.
+;;
 ;; 4. When appropriate add statements like the following to the commit
 ;;    message:
 ;;
