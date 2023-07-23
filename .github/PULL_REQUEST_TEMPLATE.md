@@ -1,20 +1,14 @@
-Please use a dedicated feature branch.  This is why:
 
-     https://github.com/magit/magit/wiki/Dedicated-pull-request-branches
+## Pull request self-check
 
-Please try to follow the conventions.
+ **If unsure, just ask about any of the below items.**
 
-     https://github.com/tarsius/no-littering#conventions
+- [ ] I created this pull request from a dedicated feature branch
+- [ ] I checked all the conventions
+    - [ ] File name follows conventions, not the original naming
+    - [ ] File subdirectory is appropriate
+    - [ ] Themed variable is aligned and placed according to sorting order
+    - [ ] Commit summary follows the format
+    - [ ] Commit message details what is inside the file
+- [ ] I added link to themes package repository URL to the pull request
 
-Going forward contributors are expected to follow the conventions more closely from the get-go and to be explicit about their thought process. Adding such statements to commit messages, would be helpful for example:
-
-   - This file is used to store an s-expression.
-   - This file is used to store raw text.
-   - This is the only configuration/data file of the package.
-   - This package does/doesn't take care of creating the containing
-     directory if necessary. (If the package does not do it, then you
-     should also fix that and submit an upstream pull request.)
-
-Also please link to the repository of the package that your pull request is theming.
-
-Thanks!
