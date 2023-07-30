@@ -1,17 +1,7 @@
 -include .config.mk
+include default.mk
 
-PKG = no-littering
-
-ELS   = $(PKG).el
-ELCS  = $(ELS:.el=.elc)
-
-DEPS  = compat
-
-EMACS      ?= emacs
-EMACS_ARGS ?=
-
-LOAD_PATH  ?= $(addprefix -L ../,$(DEPS))
-LOAD_PATH  += -L .
+.PHONY: lisp
 
 all: lisp
 
@@ -23,6 +13,12 @@ help:
 
 lisp: $(ELCS) loaddefs check-declare
 
+CLEAN  = $(ELCS) $(PKG)-autoloads.el
+
+clean:
+	@printf " Cleaning...\n"
+	@rm -rf $(CLEAN)
+
 loaddefs: $(PKG)-autoloads.el
 
 %.elc: %.el
@@ -33,12 +29,6 @@ check-declare:
 	@printf " Checking function declarations\n"
 	@$(EMACS) -Q --batch $(EMACS_ARGS) $(LOAD_PATH) \
 	--eval "(check-declare-directory default-directory)"
-
-CLEAN  = $(ELCS) $(PKG)-autoloads.el
-
-clean:
-	@printf " Cleaning...\n"
-	@rm -rf $(CLEAN)
 
 $(PKG)-autoloads.el: $(ELS)
 	@printf " Creating $@\n"
