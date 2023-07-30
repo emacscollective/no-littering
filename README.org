@@ -110,6 +110,17 @@ be changed using a function, preferably in ~early-init.el~:
 
 ** Conventions
 
+The conventions do not cover every edge-case and are not set in stone.
+If you feel it is appropriate to diverge from what is outlined below,
+then do so, *but provide justification* in the /commit message/.
+
+Likewise if you are unsure if you interpreted a convention correctly,
+just make a best effort, *but mention it* in the /pull-request message/,
+so we can improve the wording if necessary.
+
+Generally there is no need to open an issue first; the maintainers can
+amend to your commit if necessary, or ask you to do so.
+
 *** (A) File names
 
 1. File names are based on the name of the respective Emacs lisp
