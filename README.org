@@ -1,4 +1,4 @@
-* Help keeping ~/.config/emacs clean
+#+title: Help keeping ~/.config/emacs clean
 
 The default paths used to store configuration files and persistent
 data are not consistent across Emacs packages.  This isn't just a
@@ -120,6 +120,14 @@ so we can improve the wording if necessary.
 
 Generally there is no need to open an issue first; the maintainers can
 amend to your commit if necessary, or ask you to do so.
+
+*** Using the checklist
+
+Each item below is prefixed with a checkbox to make it easier to not
+forget about some of them.  Unfortunately these checkboxes cannot
+actually be checked on Github.  Instead you have to either open the
+~README.org~ file in Emacs and then use ~C-c C-c~ to check a box, or use
+the [[https://emacsmirror.net/manual/no-littering.html][interactive checklist]] in a browser.
 
 *** (A) File names
 
@@ -249,6 +257,8 @@ amend to your commit if necessary, or ask you to do so.
 # Local Variables:
 # fill-column: 70
 # End:
+
+#+export_file_name: docs/no-littering
 
 #+html: <br><br>
 #+html: <a href="https://github.com/emacscollective/no-littering/actions/workflows/compile.yml"><img alt="Compile" src="https://github.com/emacscollective/no-littering/actions/workflows/compile.yml/badge.svg"/></a>

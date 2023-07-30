@@ -1,23 +1,34 @@
 -include .config.mk
 include default.mk
 
-.PHONY: lisp
+.PHONY: lisp docs
 
-all: lisp
+all: lisp docs
 
 help:
 	$(info make all          - generate byte-code and autoloads)
 	$(info make lisp         - generate byte-code and autoloads)
+	$(info make docs         - generate html readme file)
+	$(info make html         - generate html readme file)
+	$(info make publish      - publish html readme file)
 	$(info make clean        - remove generated files)
 	@printf "\n"
 
 lisp: $(ELCS) loaddefs check-declare
+
+docs:
+	@$(MAKE) -C docs docs
+html:
+	@$(MAKE) -C docs html
+publish:
+	@$(MAKE) -C docs publish
 
 CLEAN  = $(ELCS) $(PKG)-autoloads.el
 
 clean:
 	@printf " Cleaning...\n"
 	@rm -rf $(CLEAN)
+	@$(MAKE) -C docs clean
 
 loaddefs: $(PKG)-autoloads.el
 

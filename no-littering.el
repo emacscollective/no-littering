@@ -78,7 +78,8 @@
 
 ;;;; Conventions
 
-;; Please see the "README.org" file in this repository.
+;; Please see the "README.org" file in this repository or the exported
+;; version at https://emacsmirror.net/manual/no-littering.html.
 
 ;;; Code:
 
