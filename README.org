@@ -123,8 +123,8 @@ amend to your commit if necessary, or ask you to do so.
 
 *** (A) File names
 
-1. [ ] File names are based on the name of the respective Emacs lisp
-   variables and the name of the respective Emacs package.
+1. [ ] *File names are based on the name of the respective Emacs lisp*
+   *variables and the name of the respective Emacs package.*
 
 2. [ ] The name of the respective Emacs package should serve as the
    prefix of the file name, unless the file is in a subdirectory in
@@ -188,7 +188,7 @@ amend to your commit if necessary, or ask you to do so.
    used for variables that are defined by packages that are not part
    of Emacs.
 
-2. [ ] Each of these lists is sorted alphabetically (usually by
+2. [ ] *Each of these lists is sorted alphabetically* (usually by
    variable name).  Please keep it that way.
 
 3. [ ] We attempt to align the value forms inside different ~setq~
@@ -200,7 +200,13 @@ amend to your commit if necessary, or ask you to do so.
 *** (D) Commit messages
 
 1. [ ] Please theme each package using a separate commit and use
-   commit messages of the form ~<package>: Theme <variable>~.
+   commit messages of the form
+
+   #+begin_src text
+     foo: Theme foo-config-file
+   #+end_src
+
+   In the commit message /summary line/, we do /not/ quote variable names.
 
 2. [ ] If a package has several path variables, then you should theme
    them all in one commit.
@@ -215,6 +221,9 @@ amend to your commit if necessary, or ask you to do so.
      and `foo-persistent-file'.
    #+end_src
 
+   In the commit message /body/, we do quote variable names (using Emacs
+   lisp docstring quoting, as shown above).
+
 4. [ ] When appropriate add statements like the following to the
    commit message:
 
@@ -222,8 +231,9 @@ amend to your commit if necessary, or ask you to do so.
    - This file is used to store raw text.
    - This is the only configuration/data file of the package.
    - This package does/doesn't take care of creating the containing
-     directory if necessary. (If the package does not do it, then you
-     should also fix that and submit an upstream pull request.)
+     directory if necessary.  (If the package does not do it, then you
+     should also fix that and submit an pull-request in the package's
+     repository.)
 
 5. [ ] If you are uncertain, then be explicit about it by adding a
    comment to the pull-request.
