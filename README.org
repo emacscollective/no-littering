@@ -238,6 +238,14 @@ amend to your commit if necessary, or ask you to do so.
 5. [ ] If you are uncertain, then be explicit about it by adding a
    comment to the pull-request.
 
+*** (E) Pull-request
+
+1. [ ] Please use a dedicated feature branch.  See [[https://github.com/magit/magit/wiki/Dedicated-pull-request-branches][this explanation]] to
+   learn why we ask for that.
+
+2. [ ] Please include a link to the package repository in the
+   description of the pull-request.
+
 # Local Variables:
 # fill-column: 70
 # End:
