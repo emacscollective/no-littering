@@ -176,3 +176,5 @@ Likewise, remove any other customization of the paths managed by
     (dolist (var (no-littering-get-themed-variables))
       (no-littering--custom-reset-symbol (car var))))
 #+end_src
+
+#+export_file_name: docs/migrate
