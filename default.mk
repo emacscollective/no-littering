@@ -15,3 +15,5 @@ EMACS_ARGS ?=
 
 LOAD_PATH  ?= $(addprefix -L ../,$(DEPS))
 LOAD_PATH  += -L .
+
+ORG_LOAD_PATH ?= -L ../../htmlize
