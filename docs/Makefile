@@ -14,7 +14,7 @@ ORG_EVAL += --funcall org-html-export-to-html
 
 no-littering.html: ../README.org
 	@printf "Generating $@\n"
-	$(EMACS) $(ORG_ARGS) ../README.org $(ORG_EVAL)
+	@$(EMACS) $(ORG_ARGS) $< $(ORG_EVAL)
 
 PUBLISH_PATH   ?= /manual/
 S3_BUCKET      ?= s3://$(DOMAIN)
