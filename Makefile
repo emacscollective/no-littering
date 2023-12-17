@@ -11,8 +11,11 @@ help:
 	$(info make docs         - generate html readme file)
 	$(info make html         - generate html readme file)
 	$(info make publish      - publish html readme file)
+	$(info make redo         - re-generate byte-code and autoloads)
 	$(info make clean        - remove generated files)
 	@printf "\n"
+
+redo: clean lisp
 
 lisp: $(ELCS) loaddefs check-declare
 
