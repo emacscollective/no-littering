@@ -144,6 +144,7 @@ This variable has to be set before `no-littering' is loaded.")
     ;; Gnus hardcodes newsrc.eld to be based on gnus-startup-file.
     (setq gnus-startup-file                (etc "gnus/newsrc"))
     (setq ido-save-directory-list-file     (var "ido-save-directory-list.el"))
+    (setq ielm-history-file-name           (var "ielm-history.eld"))
     (setq image-dired-db-file              (var "image-dired/db.el"))
     (setq image-dired-dir                  (var "image-dired/"))
     (setq image-dired-gallery-dir          (var "image-dired/gallery/"))
