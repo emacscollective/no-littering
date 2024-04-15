@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2016-2024 Jonas Bernoulli
 
-;; Author: Jonas Bernoulli <jonas@bernoul.li>
+;; Author: Jonas Bernoulli <emacs.no-littering@jonas.bernoulli.dev>
 ;; Homepage: https://github.com/emacscollective/no-littering
 ;; Keywords: convenience
 
