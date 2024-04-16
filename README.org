@@ -70,6 +70,18 @@ A function ~no-littering-theme-backups~ is provided, which does theme
 these features.  Before calling that function from your init files,
 you should read its docstring and implementation.
 
+**** Lock files
+
+To put lock files into a single repository, you could use something
+like the following.  See the docstring to learn about reasons why you
+might want to refrain from doing that.
+
+#+begin_src emacs-lisp
+  (let ((dir (no-littering-expand-var-file-name "lock-files/")))
+    (make-directory dir t)
+    (setq lock-file-name-transforms `((".*" ,dir t))))
+#+end_src
+
 **** Recent files
 
 If you use ~recentf~ then you might find it convenient to exclude all
