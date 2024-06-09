@@ -384,15 +384,12 @@ This variable has to be set before `no-littering' is loaded.")
 
 ;;; Advices
 
-(defun no-littering-emacs-session-filename (session-id)
+(define-advice emacs-session-filename (:override (session-id) no-littering)
   "Construct a filename to save the session in, based on SESSION-ID.
 Unconditionally return a filename in `no-littering-var-directory'."
   (let ((dir (no-littering-expand-var-file-name "emacs-session/")))
     (make-directory dir t)
     (expand-file-name session-id dir)))
-
-(advice-add 'emacs-session-filename :override
-            #'no-littering-emacs-session-filename)
 
 ;;; Backups
 
