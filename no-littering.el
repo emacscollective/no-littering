@@ -397,6 +397,7 @@ Unconditionally return a filename in `no-littering-var-directory'."
 
 (defvar undo-tree-history-directory-alist)
 
+;;;###autoload
 (defun no-littering-theme-backups ()
   "Theme locations where backups of various sorts are created.
 
