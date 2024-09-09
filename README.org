@@ -114,7 +114,9 @@ When using Emacs 29, the location of the native compilation cache can
 be changed using a function, preferably in ~early-init.el~:
 
 #+begin_src emacs-lisp
-  (when (fboundp 'startup-redirect-eln-cache)
+  (when (and (fboundp 'startup-redirect-eln-cache)
+             (fboundp 'native-comp-available-p)
+             (native-comp-available-p))
     (startup-redirect-eln-cache
      (convert-standard-filename
       (expand-file-name  "var/eln-cache/" user-emacs-directory))))
