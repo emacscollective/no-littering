@@ -145,6 +145,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq gnus-init-file                   (etc "gnus/init.el"))
     ;; Gnus hardcodes newsrc.eld to be based on gnus-startup-file.
     (setq gnus-startup-file                (etc "gnus/newsrc"))
+    (setq nnmail-message-id-cache-file     (var "gnus/nnmail-cache"))
     (setq ido-save-directory-list-file     (var "ido-save-directory-list.el"))
     (setq ielm-history-file-name           (var "ielm-history.eld"))
     (setq image-dired-db-file              (var "image-dired/db.el"))
