@@ -90,6 +90,11 @@
 (require 'cl-lib)
 (require 'compat)
 
+(defvar no-littering-data-directory
+  (expand-file-name (convert-standard-filename "var/") user-emacs-directory)
+  "The directory where packages place their state files.
+This variable has to be set before `no-littering' is loaded.")
+
 (define-obsolete-variable-alias 'no-littering-etc-directory
   'no-littering-config-directory "2025-01-25")
 
@@ -103,13 +108,24 @@ This variable has to be set before `no-littering' is loaded.")
 
 (defvar no-littering-state-directory
   (expand-file-name (convert-standard-filename "var/") user-emacs-directory)
-  "The directory where packages place their persistent data files.
+  "The directory where packages place their data files.
 This variable has to be set before `no-littering' is loaded.")
 
 (defvar no-littering-cache-directory
   (expand-file-name (convert-standard-filename "var/") user-emacs-directory)
-  "The directory where packages place their persistent data files.
+  "The directory where packages place their non-essential data files.
 This variable has to be set before `no-littering' is loaded.")
+
+(defvar no-littering-runtime-directory
+  (expand-file-name (convert-standard-filename "var/") user-emacs-directory)
+  "The directory where packages place their non-essential runtime files and other file objects.
+This variable has to be set before `no-littering' is loaded.")
+
+;;;###autoload
+(defun no-littering-expand-data-file-name (file)
+  "Expand filename FILE relative to `no-littering-cache-directory'."
+  (expand-file-name (convert-standard-filename file)
+                    no-littering-data-directory))
 
 ;;;###autoload
 (define-obsolete-function-alias 'no-littering-etc-file-name
@@ -137,16 +153,32 @@ This variable has to be set before `no-littering' is loaded.")
   (expand-file-name (convert-standard-filename file)
                     no-littering-cache-directory))
 
-(cl-letf (((symbol-function 'etc)
+;;;###autoload
+(defun no-littering-expand-runtime-file-name (file)
+  "Expand filename FILE relative to `no-littering-runtime-directory'."
+  (expand-file-name (convert-standard-filename file)
+                    no-littering-runtime-directory))
+
+(cl-letf (((symbol-function 'data)
+           (symbol-function #'no-littering-expand-data-file-name))
+          ((symbol-function 'etc)
            (symbol-function #'no-littering-expand-config-file-name))
           ((symbol-function 'var)
            (symbol-function #'no-littering-expand-state-file-name))
           ((symbol-function 'cache)
-           (symbol-function #'no-littering-expand-cache-file-name)))
+           (symbol-function #'no-littering-expand-cache-file-name))
+          ((symbol-function 'runtime)
+           (symbol-function #'no-littering-expand-runtime-file-name)))
 
+  (make-directory no-littering-state-directory t)
   (make-directory no-littering-etc-directory t)
   (make-directory no-littering-var-directory t)
   (make-directory no-littering-cache-directory t)
+  ;; XDG mandates that this directory already exists, but we might not
+  ;; be running under XDG.
+  (unless (make-directory no-littering-runtime-directory t)
+    (set-file-modes no-littering-runtime-directory 0700))
+
   (with-no-warnings ; many of these variables haven't been defined yet
 
 ;;; Built-in packages
