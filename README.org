@@ -1,5 +1,19 @@
 #+title: Help keeping ~/.config/emacs clean
 
+** Status
+
+After a [[https://github.com/emacscollective/no-littering/discussions/252][discussion on upstream]], this project will be maintained as
+"friendly fork" of the original ~no-littering~.  A name change is
+pending.
+
+The XDG classifications are more fine grained than ~no-littering~'s,
+so a pass through all the variables it sets is necessary.
+
+Until the renaming and that pass are complete, this package should be
+considered unstable.
+
+** Introduction
+
 The default paths used to store configuration files and persistent
 data are not consistent across Emacs packages.  This isn't just a
 problem with third-party packages but even with built-in packages.
