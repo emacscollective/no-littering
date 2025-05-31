@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/emacscollective/no-littering
 ;; Keywords: convenience
 
-;; Package-Version: 1.7.6
-;; Package-Requires: ((emacs "26.1") (compat "30.0.1.0"))
+;; Package-Version: 1.7.7
+;; Package-Requires: ((emacs "26.1") (compat "30.1"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
