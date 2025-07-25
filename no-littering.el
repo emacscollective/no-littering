@@ -134,6 +134,8 @@ This variable has to be set before `no-littering' is loaded.")
     (setq erc-log-channels-directory       (var "erc/log-channels/"))
     (setq erc-startup-file-list            (list (etc "erc/startup.el") (etc "erc/startup") ".ercrc.el" ".ercrc"))
     (setq eshell-aliases-file              (etc "eshell/aliases"))
+    ;; This controls where `eshell-history-file-name' is places.
+    ;; Other files belong in "etc/" so theme their variables directly.
     (setq eshell-directory-name            (var "eshell/"))
     (setq eshell-login-script              (etc "eshell/login"))
     (setq eshell-rc-script                 (etc "eshell/rc"))
@@ -188,7 +190,8 @@ This variable has to be set before `no-littering' is loaded.")
 
     (eval-after-load 'desktop     '(make-directory desktop-dirname t))
     (eval-after-load 'erc         '(make-directory erc-dcc-get-default-directory t))
-    (eval-after-load 'eshell      '(make-directory eshell-directory-name t))
+    (eval-after-load 'eshell      '(with-file-modes #o700
+                                     (make-directory ,(etc "eshell/" t))))
     (eval-after-load 'eww         '(make-directory eww-bookmarks-directory t))
     (eval-after-load 'gnus        `(make-directory ,(etc "gnus/") t))
     (eval-after-load 'gnus        '(make-directory gnus-dribble-directory t))
