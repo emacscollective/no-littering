@@ -462,15 +462,17 @@ you must turn of these features completely."
           ("\\`/dev/shm\\([^/]*/\\)*\\(.*\\)\\'" "\\2")
           (".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
   (setq backup-directory-alist
-        `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
-          ("\\`/tmp/" . nil)
-          ("\\`/dev/shm/" . nil)
-          ("." . ,(no-littering-expand-var-file-name "backup/"))))
+        (delete-dups
+         `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
+           ("\\`/tmp/" . nil)
+           ("\\`/dev/shm/" . nil)
+           ("." . ,(no-littering-expand-var-file-name "backup/")))))
   (setq undo-tree-history-directory-alist
-        `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
-          ("\\`/tmp/" . nil)
-          ("\\`/dev/shm/" . nil)
-          ("." . ,(no-littering-expand-var-file-name "undo-tree-hist/"))))
+        (delete-dups
+         `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
+           ("\\`/tmp/" . nil)
+           ("\\`/dev/shm/" . nil)
+           ("." . ,(no-littering-expand-var-file-name "undo-tree-hist/")))))
   )
 
 ;;; _
