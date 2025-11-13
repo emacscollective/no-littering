@@ -3,7 +3,7 @@ include ../default.mk
 
 docs: html
 
-HTML  = $(PKG).html
+HTML  = index.html
 HTML += migrate.html
 
 html: $(HTML)
@@ -19,24 +19,17 @@ ORG_EVAL += --funcall org-html-export-to-html
 	@printf "Generating $@\n"
 	@$(EMACS) $(ORG_ARGS) $< $(ORG_EVAL)
 
-no-littering.html: ../README.org
+index.html: ../README.org
 	@printf "Generating $@\n"
 	@$(EMACS) $(ORG_ARGS) $< $(ORG_EVAL)
 
-PUBLISH_PATH   ?= /manual/
-S3_BUCKET      ?= s3://$(DOMAIN)
-PUBLISH_TARGET  = $(S3_BUCKET)$(PUBLISH_PATH)
-CFRONT_PATHS    = $(PKG).html
-
-comma := ,
-empty :=
-space := $(empty) $(empty)
+DOCS_DOMAIN = docs.$(DOMAIN)
+DOCS_TARGET = $(subst .,_,$(DOCS_DOMAIN)):$(PKG)/
 
 publish: html
-	@for f in $(HTML); do aws s3 cp $$f $(PUBLISH_TARGET); done
-	@printf "Generating CDN invalidation\n"
-	@aws cloudfront create-invalidation --distribution-id $(CFRONT_DIST) --paths \
-	"$(subst $(space),$(comma),$(addprefix $(PUBLISH_PATH),$(CFRONT_PATHS)))" > /dev/null
+	@printf "Publishing readme...\n"
+	@$(RCLONE) copy $(RCLONE_ARGS) index.html   $(DOCS_TARGET)
+	@$(RCLONE) copy $(RCLONE_ARGS) migrate.html $(DOCS_TARGET)
 
 CLEAN = $(HTML)
 

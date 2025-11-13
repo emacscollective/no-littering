@@ -142,7 +142,7 @@ Each item below is prefixed with a checkbox to make it easier to not
 forget about some of them.  Unfortunately these checkboxes cannot
 actually be checked on Github.  Instead you have to either open the
 ~README.org~ file in Emacs and then use ~C-c C-c~ to check a box, or use
-the [[https://emacsmirror.net/manual/no-littering.html][interactive checklist]] in a browser.
+the [[https://docs.emacsmirror.org/no-littering][interactive checklist]] in a browser.
 
 *** (A) File names
 
@@ -273,7 +273,7 @@ the [[https://emacsmirror.net/manual/no-littering.html][interactive checklist]] 
 # fill-column: 70
 # End:
 
-#+export_file_name: docs/no-littering
+#+export_file_name: docs/index
 
 #+html: <br><br>
 #+html: <a href="https://github.com/emacscollective/no-littering/actions/workflows/compile.yml"><img alt="Compile" src="https://github.com/emacscollective/no-littering/actions/workflows/compile.yml/badge.svg"/></a>
