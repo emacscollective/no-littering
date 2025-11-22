@@ -134,7 +134,10 @@ This variable has to be set before `no-littering' is loaded.")
     (setq ede-project-placeholder-cache-file (var "ede-projects.el"))
     (setq erc-dcc-get-default-directory    (var "erc/dcc/"))
     (setq erc-log-channels-directory       (var "erc/log-channels/"))
-    (setq erc-startup-file-list            (list (etc "erc/startup.el") (etc "erc/startup") ".ercrc.el" ".ercrc"))
+    (setq erc-startup-file-list            (list (etc "erc/startup.el")
+                                                 (etc "erc/startup")
+                                                 ".ercrc.el"
+                                                 ".ercrc"))
     (setq eshell-aliases-file              (etc "eshell/aliases"))
     ;; This controls where `eshell-history-file-name' is places.
     ;; Other files belong in "etc/" so theme their variables directly.
