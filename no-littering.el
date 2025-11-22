@@ -187,7 +187,6 @@ This variable has to be set before `no-littering' is loaded.")
     (setq timeclock-file                   (var "timeclock"))
     (setq tramp-auto-save-directory        (var "tramp/auto-save/"))
     (setq tramp-persistency-file-name      (var "tramp/persistency.el"))
-    (push (var "treesit/")                 treesit-extra-load-path)
     (setq type-break-file-name             (var "type-break.el"))
     (setq url-cache-directory              (var "url/cache/"))
     (setq url-configuration-directory      (var "url/"))
@@ -204,6 +203,7 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'newsticker  `(make-directory ,(var "newsticker/") t))
     (eval-after-load 'org         `(make-directory ,(var "org/") t))
     (eval-after-load 'shadowfile  `(make-directory ,(var "shadow/") t))
+    (eval-after-load 'treesit     '(push (var "treesit/") treesit-extra-load-path))
 
 ;;; Third-party packages
 
