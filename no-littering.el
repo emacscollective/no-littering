@@ -488,5 +488,6 @@ you must turn of these features completely."
 (provide 'no-littering)
 ;; Local Variables:
 ;; indent-tabs-mode: nil
+;; lisp-indent-local-overrides: ((cond . 0) (interactive . 0))
 ;; End:
 ;;; no-littering.el ends here
