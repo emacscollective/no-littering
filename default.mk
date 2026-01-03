@@ -9,9 +9,9 @@ ELCS  = $(ELS:.el=.elc)
 
 DEPS  = compat
 
-LOAD_PATH     ?= $(addprefix -L ../../,$(DEPS))
+LOAD_PATH     ?= $(addprefix -L ../,$(DEPS))
 LOAD_PATH     += -L .
-ORG_LOAD_PATH ?= -L ../../org/lisp
+ORG_LOAD_PATH ?= -L ../org/lisp
 
 EMACS       ?= emacs
 EMACS_ARGS  ?=
