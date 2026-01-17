@@ -163,6 +163,8 @@ other file objects. This variable has to be set before `no-littering' is loaded.
            (symbol-function #'no-littering-expand-data-file-name))
           ((symbol-function 'etc)
            (symbol-function #'no-littering-expand-config-file-name))
+          ((symbol-function 'state)
+           (symbol-function #'no-littering-expand-state-file-name))
           ((symbol-function 'var)
            (symbol-function #'no-littering-expand-state-file-name))
           ((symbol-function 'cache)
@@ -170,7 +172,7 @@ other file objects. This variable has to be set before `no-littering' is loaded.
           ((symbol-function 'runtime)
            (symbol-function #'no-littering-expand-runtime-file-name)))
 
-  (make-directory no-littering-state-directory t)
+  (make-directory no-littering-data-directory t)
   (make-directory no-littering-etc-directory t)
   (make-directory no-littering-var-directory t)
   (make-directory no-littering-cache-directory t)
@@ -554,19 +556,19 @@ you must turn of these features completely."
            ,(file-name-concat temporary-file-directory "\\2") t)
           ("\\`/tmp\\([^/]*/\\)*\\(.*\\)\\'" "\\2")
           ("\\`/dev/shm\\([^/]*/\\)*\\(.*\\)\\'" "\\2")
-          (".*" ,(no-littering-expand-state-file-name "auto-save/") t)))
+          (".*" ,(no-littering-expand-runtime-file-name "auto-save/") t)))
   (setq backup-directory-alist
         (delete-dups
          `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
            ("\\`/tmp/" . nil)
            ("\\`/dev/shm/" . nil)
-           ("." . ,(no-littering-expand-state-file-name "backup/")))))
+           ("." . ,(no-littering-expand-runtime-file-name "backup/")))))
   (setq undo-tree-history-directory-alist
         (delete-dups
          `((,(concat "\\`" (file-name-as-directory temporary-file-directory)))
            ("\\`/tmp/" . nil)
            ("\\`/dev/shm/" . nil)
-           ("." . ,(no-littering-expand-state-file-name "undo-tree-hist/")))))
+           ("." . ,(no-littering-expand-runtime-file-name "undo-tree-hist/")))))
   )
 
 ;;; _
