@@ -137,6 +137,22 @@ be changed using a function, preferably in ~early-init.el~:
       (expand-file-name  "var/eln-cache/" user-emacs-directory))))
 #+end_src
 
+**** XDG support
+
+If you would like to adopt XDG base directories, then set the
+respective variables before loading the feature.
+
+#+begin_src emacs-lisp
+  (eval-and-compile
+    (require 'xdg)
+    (setq no-littering-cache-directory   (expand-file-name "emacs/" (xdg-cache-home)))
+    (setq no-littering-config-directory  user-emacs-directory)
+    (setq no-littering-data-directory    (expand-file-name "emacs/" (xdg-data-home)))
+    (setq no-littering-runtime-directory (expand-file-name "emacs/" (xdg-runtime-dir)))
+    (setq no-littering-state-directory   (expand-file-name "emacs/" (xdg-state-home)))
+    (require 'no-littering))
+#+end_src
+
 ** Conventions
 
 The conventions do not cover every edge-case and are not set in stone.

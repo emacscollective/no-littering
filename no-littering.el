@@ -92,7 +92,7 @@
 
 (defvar no-littering-data-directory
   (expand-file-name (convert-standard-filename "var/") user-emacs-directory)
-  "The directory where packages place their state files.
+  "The directory where packages place their data files.
 This variable has to be set before `no-littering' is loaded.")
 
 (define-obsolete-variable-alias 'no-littering-etc-directory
@@ -108,18 +108,18 @@ This variable has to be set before `no-littering' is loaded.")
 
 (defvar no-littering-state-directory
   (expand-file-name (convert-standard-filename "var/") user-emacs-directory)
-  "The directory where packages place their data files.
+  "The directory where packages place their state data files.
 This variable has to be set before `no-littering' is loaded.")
 
 (defvar no-littering-cache-directory
   (expand-file-name (convert-standard-filename "var/") user-emacs-directory)
-  "The directory where packages place their non-essential data files.
+  "The directory where packages place their non-essential (cached) data files.
 This variable has to be set before `no-littering' is loaded.")
 
 (defvar no-littering-runtime-directory
-  (expand-file-name (convert-standard-filename "var/") user-emacs-directory)
-  "The directory where packages place their non-essential runtime files and other file objects.
-This variable has to be set before `no-littering' is loaded.")
+  temporary-file-directory
+  "The directory where packages place their non-essential runtime files and
+other file objects. This variable has to be set before `no-littering' is loaded.")
 
 ;;;###autoload
 (defun no-littering-expand-data-file-name (file)
