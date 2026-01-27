@@ -256,16 +256,26 @@ other file objects. This variable has to be set before `no-littering' is loaded.
     (setq url-cookie-file                  (var "url/cookies.el"))
     (setq url-history-file                 (var "url/history.el"))
 
+    (eval-after-load 'autoinsert  '(make-directory auto-insert-directory t))
+    (eval-after-load 'bookmark    `(make-directory ,(var "bookmark/") t))
     (eval-after-load 'desktop     '(make-directory desktop-dirname t))
     (eval-after-load 'erc         '(make-directory erc-dcc-get-default-directory t))
+    (eval-after-load 'erc         '(make-directory erc-log-channels-directory t))
     (eval-after-load 'eshell      `(with-file-modes #o700
                                      (make-directory ,(etc "eshell/") t)))
+    (eval-after-load 'eshell      `(make-directory ,(var "eshell/") t))
     (eval-after-load 'eww         '(make-directory eww-bookmarks-directory t))
+    (eval-after-load 'gamegrid    '(make-directory gamegrid-user-score-file-directory t))
+    (eval-after-load 'gamegrid    '(make-directory shared-game-score-directory t))
     (eval-after-load 'gnus        `(make-directory ,(etc "gnus/") t))
     (eval-after-load 'gnus        '(make-directory gnus-dribble-directory t))
+    (eval-after-load 'multisession '(make-directory multisession-directory t))
     (eval-after-load 'newsticker  `(make-directory ,(var "newsticker/") t))
     (eval-after-load 'org         `(make-directory ,(data "org/") t))
-    (eval-after-load 'org         `(make-directory ,(var "org/") t))
+    (eval-after-load 'org         `(make-directory ,(var "data/") t))
+    (eval-after-load 'org         '(make-directory org-publish-timestamp-directory t))
+    (eval-after-load 'persist     '(make-directory persist--directory-location t))
+    (eval-after-load 'rcirc       '(make-directory rcirc-log-directory t))
     (eval-after-load 'shadowfile  `(make-directory ,(data "shadow/") t))
     (eval-after-load 'treesit
       `(when (treesit-available-p)
@@ -279,6 +289,7 @@ other file objects. This variable has to be set before `no-littering' is loaded.
                       (eq treesit-auto-install-grammar 'ask))
              (make-directory dir t)
              (setq treesit-auto-install-grammar 'ask-dir)))))
+    (eval-after-load 'url         '(make-directory url-configuration-directory t))
 
 ;;; Third-party packages
 
