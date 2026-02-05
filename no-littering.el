@@ -203,7 +203,8 @@ This variable has to be set before `no-littering' is loaded.")
     (eval-after-load 'newsticker  `(make-directory ,(var "newsticker/") t))
     (eval-after-load 'org         `(make-directory ,(var "org/") t))
     (eval-after-load 'shadowfile  `(make-directory ,(var "shadow/") t))
-    (eval-after-load 'treesit     `(push ,(var "treesit/") treesit-extra-load-path))
+    (eval-after-load 'treesit     `(when (treesit-available-p)
+                                     (push ,(var "treesit/") treesit-extra-load-path)))
 
 ;;; Third-party packages
 
