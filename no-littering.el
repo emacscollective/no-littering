@@ -310,6 +310,7 @@ This variable has to be set before `no-littering' is loaded.")
     (setq mc/list-file                     (var "mc-list.el"))
     (setq meghanada-server-install-dir     (var "meghanada/"))
     (setq multi-compile-history-file       (var "multi-compile-history.el"))
+    (setq neocaml-repl-history-file        (var "neocaml-repl-history"))
     (setq nix-buffer-directory-name        (var "nix-buffer/"))
     (setq nomad-tramp-script-directory     (var "nomad-tramp/"))
     ;; The value of this variable MUST NOT end with ".el" but the
