@@ -279,3 +279,4 @@ the [[https://docs.emacsmirror.org/no-littering][interactive checklist]] in a br
 #+html: <a href="https://github.com/emacscollective/no-littering/actions/workflows/compile.yml"><img alt="Compile" src="https://github.com/emacscollective/no-littering/actions/workflows/compile.yml/badge.svg"/></a>
 #+html: <a href="https://snapshots.melpa.org/#/no-littering"><img alt="MELPA Snapshots" src="https://snapshots.melpa.org/packages/no-littering-badge.svg"/></a>
 #+html: <a href="https://releases.melpa.org/#/no-littering"><img alt="MELPA Releases" src="https://releases.melpa.org/packages/no-littering-badge.svg"/></a>
+#+html: <a href="https://emacsair.me/human"><img alt="human made" src="https://emacsair.me/assets/badges/human.svg"/></a>
