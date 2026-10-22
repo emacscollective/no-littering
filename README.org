@@ -57,8 +57,8 @@ variables before loading the feature.
 
 Supporting XDG would make sense, but I do not intend to implement and
 maintain that here.  Feel free to fork or create a new package.  Such
-a fork can be found in #280, and an earlier iteration is discussed in
-#252.  See also #171.
+a fork can be found in [[https://github.com/emacscollective/no-littering/discussions/][#280]], and an earlier iteration is discussed in
+[[https://github.com/emacscollective/no-littering/discussions/][#252]].  See also [[https://github.com/emacscollective/no-littering/discussions/][#171]].
 
 Ideally support for classifying files would be implemented directly
 in Emacs, and package maintainers would be encouraged to do that work.
