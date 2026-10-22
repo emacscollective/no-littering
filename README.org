@@ -52,6 +52,22 @@ variables before loading the feature.
     (require 'no-littering))
 #+end_src
 
+*** FAQ
+**** What about XDG support?
+
+Supporting XDG would make sense, but I do not intend to implement and
+maintain that here.  Feel free to fork or create a new package.  Such
+a fork can be found in #280, and an earlier iteration is discussed in
+#252.  See also #171.
+
+Ideally support for classifying files would be implemented directly
+in Emacs, and package maintainers would be encouraged to do that work.
+As the maintainer of this package, I am on the hook to classify the
+files of third-party packages (many of which I have never heard of,
+most of which I do not use) into two categories.  I do not want to
+take on more work, which having to decide between four categories
+would be.
+
 *** Suggested Settings
 **** Auto-save, backup and undo-tree files
 
